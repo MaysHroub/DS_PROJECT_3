@@ -64,5 +64,10 @@ public class Martyr implements Comparable<Martyr> {
 		int comp = district.compareToIgnoreCase(o.district);
 		return (comp == 0) ? name.compareToIgnoreCase(o.name) : comp;
 	}
+	
+	@Override
+	public String toString() {
+		return name;
+	}
 
 }
