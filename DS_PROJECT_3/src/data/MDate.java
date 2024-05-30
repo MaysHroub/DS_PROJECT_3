@@ -9,6 +9,10 @@ public class MDate implements Comparable<MDate> {
 	private Date date;
 	private AVLTree<Martyr> martyrs;
 	
+	public MDate(Date date) {
+		setDate(date);
+		martyrs = new AVLTree<>();
+	}
 
 	public Date getDate() {
 		return date;
