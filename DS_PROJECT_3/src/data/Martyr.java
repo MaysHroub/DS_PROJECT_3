@@ -8,6 +8,14 @@ public class Martyr implements Comparable<Martyr> {
 	
 	public Martyr() {}
 	
+	public Martyr(String name, String district, String location, char gender, int age) {
+		setName(name);
+		setDistrict(district);
+		setLocation(location);
+		setGender(gender);
+		setAge(age);
+	}
+
 	public int getAge() {
 		return age;
 	}
