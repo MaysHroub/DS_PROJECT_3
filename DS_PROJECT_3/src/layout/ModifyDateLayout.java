@@ -38,12 +38,16 @@ public class ModifyDateLayout extends TabLayout {
 		updateBtn = new Button("Update");
 		printBtn = new Button("Print");
 		datesCB = new ComboBox<>();
-		datesTable = new TableView<>();
 		alert = new Alert(AlertType.CONFIRMATION);
+		datesTable = new TableView<>();
+		
+		fillDatesCB();
 		
 		alert.setTitle("Confirmation required");
 		alert.setHeaderText("Are you sure you want to proceed?");
 		alert.setContentText("This action cannot be undone :)");
+		
+		
 		
 		GridPane upGrid = new GridPane(10, 10);
 		upGrid.add(pickNewL, 0, 0);
@@ -66,6 +70,11 @@ public class ModifyDateLayout extends TabLayout {
 		layout.setRight(rightBox);
 		
 		return layout;
+	}
+
+	private void fillDatesCB() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
