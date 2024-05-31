@@ -55,6 +55,8 @@ public class ModifyDateLayout extends TabLayout {
 		
 		VBox rightBox = new VBox(15, datesTable, printBtn);
 		
+		VBox leftBox = new VBox(20, upGrid, downGrid);
+		
 		return null;
 	}
 
