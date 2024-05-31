@@ -13,4 +13,8 @@ public class DataHolder {
 		this.dates = dates;
 	}
 	
+	public void moveUp() {
+		
+	}
+	
 }
