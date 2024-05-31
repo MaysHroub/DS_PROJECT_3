@@ -10,6 +10,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -52,7 +53,7 @@ public class ModifyDateLayout extends TabLayout {
 		downGrid.add(deleteBtn, 2, 0);
 		downGrid.add(statusL, 1, 1);
 		
-		VBox vBox = new VBox(15, datesTable, printBtn);
+		VBox rightBox = new VBox(15, datesTable, printBtn);
 		
 		return null;
 	}
