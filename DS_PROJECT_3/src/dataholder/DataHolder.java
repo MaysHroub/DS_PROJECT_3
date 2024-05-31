@@ -1,6 +1,7 @@
 package dataholder;
 
 import data.MDate;
+import hash.Flag;
 import hash.QuadraticOHash;
 
 public class DataHolder {
@@ -15,7 +16,12 @@ public class DataHolder {
 	}
 	
 	public void moveUp() {
-		
+		int i = currentIdx;
+		for (; --i >= 0 && dates.get(i).getFlag() != Flag.FULL;);
+		if (i >= 0 && dates.get(i).getFlag() == Flag.FULL) {
+			currentIdx = i;
+			currentDate = dates.get(i).getData();
+		}
 	}
 	
 }
