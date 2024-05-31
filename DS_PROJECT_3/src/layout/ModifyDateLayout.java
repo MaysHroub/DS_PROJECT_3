@@ -50,6 +50,7 @@ public class ModifyDateLayout extends TabLayout {
 		deleteBtn = new Button("Delete");
 		deleteBtn.setOnAction(e -> delete());
 		updateBtn = new Button("Update");
+		updateBtn.setOnAction(e -> update());
 		printBtn = new Button("Print");
 		
 		datesCB = new ComboBox<>();
@@ -89,6 +90,11 @@ public class ModifyDateLayout extends TabLayout {
 		layout.setRight(rightBox);
 		
 		return layout;
+	}
+
+	private Object update() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private void delete() {
