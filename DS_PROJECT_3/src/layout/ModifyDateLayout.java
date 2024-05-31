@@ -3,18 +3,14 @@ package layout;
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Optional;
-
 import data.MDate;
-import data.Martyr;
 import dataholder.DataHolder;
 import hash.Flag;
 import hash.HNode;
 import hash.QuadraticOHash;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
