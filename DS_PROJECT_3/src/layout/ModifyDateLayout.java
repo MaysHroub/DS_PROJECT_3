@@ -35,6 +35,7 @@ public class ModifyDateLayout extends TabLayout {
 		super("", dataHolder);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	protected Pane createLayout() {
 		Label pickNewL = new Label("Pick a new date: "),
