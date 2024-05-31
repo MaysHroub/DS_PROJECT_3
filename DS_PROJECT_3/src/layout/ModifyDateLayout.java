@@ -48,6 +48,7 @@ public class ModifyDateLayout extends TabLayout {
 		insertBtn = new Button("Insert");
 		insertBtn.setOnAction(e -> insert());
 		deleteBtn = new Button("Delete");
+		deleteBtn.setOnAction(e -> delete());
 		updateBtn = new Button("Update");
 		printBtn = new Button("Print");
 		
@@ -88,6 +89,11 @@ public class ModifyDateLayout extends TabLayout {
 		layout.setRight(rightBox);
 		
 		return layout;
+	}
+
+	private Object delete() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private void insert() {
