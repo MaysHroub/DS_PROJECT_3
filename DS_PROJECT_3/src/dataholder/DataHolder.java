@@ -33,5 +33,9 @@ public class DataHolder {
 			currentDate = dates.get(i).getData();
 		}
 	}
+
+	public MDate getCurrentDate() {
+		return currentDate;
+	}
 	
 }
