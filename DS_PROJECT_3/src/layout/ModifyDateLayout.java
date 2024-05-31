@@ -1,9 +1,13 @@
 package layout;
 
 import data.MDate;
+import data.Martyr;
 import dataholder.DataHolder;
 import hash.Flag;
+import hash.HNode;
 import hash.QuadraticOHash;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -11,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -22,7 +27,7 @@ public class ModifyDateLayout extends TabLayout {
 	private DatePicker datePicker;
 	private ComboBox<MDate> datesCB;
 	private Button insertBtn, deleteBtn, updateBtn, printBtn;
-	private TableView<MDate> datesTable;
+	private TableView<HNode<MDate>> datesTable;
 	private Alert alert;
 	private Label statusL;
 
@@ -49,7 +54,12 @@ public class ModifyDateLayout extends TabLayout {
 		alert.setHeaderText("Are you sure you want to proceed?");
 		alert.setContentText("This action cannot be undone :)");
 		
-		
+		TableColumn<HNode<MDate>, String> dateColumn = new TableColumn<>("Date");
+		TableColumn<HNode<MDate>, String> flagColumn = new TableColumn<>("Flag");
+		dateColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getData().toString()));
+		flagColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getFlag().toString()));
+		datesTable.getColumns().addAll(dateColumn, flagColumn);
+		datesTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 		
 		GridPane upGrid = new GridPane(10, 10);
 		upGrid.add(pickNewL, 0, 0);
