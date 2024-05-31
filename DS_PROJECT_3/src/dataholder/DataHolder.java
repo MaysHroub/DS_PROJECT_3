@@ -7,6 +7,7 @@ public class DataHolder {
 	
 	private QuadraticOHash<MDate> dates;
 	private MDate currentDate;
+	private int currentIdx;
 
 	
 	public DataHolder(QuadraticOHash<MDate> dates) {
