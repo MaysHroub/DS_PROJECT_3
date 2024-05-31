@@ -41,6 +41,12 @@ public abstract class OpenAddressignHash<T extends Comparable<T>> {
 				System.out.print(i + "" + table[i] + " - ");
 	}
 	
+	public T get(int index) {
+		if (index >= 0 && index < m)
+			return table[index].getData();
+		return null;
+	}
+	
 	@SuppressWarnings("unchecked")
 	protected void rehash() {
 		int tempM = m;
