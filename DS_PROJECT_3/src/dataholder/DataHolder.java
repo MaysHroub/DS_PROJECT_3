@@ -24,4 +24,13 @@ public class DataHolder {
 		}
 	}
 	
+	public void moveDown() {
+		int i = currentIdx, m = dates.getTableSize();
+		for (; ++i < m && dates.get(i).getFlag() != Flag.FULL;);
+		if (i < m && dates.get(i).getFlag() == Flag.FULL) {
+			currentIdx = i;
+			currentDate = dates.get(i).getData();
+		}
+	}
+	
 }
