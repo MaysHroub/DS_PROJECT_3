@@ -2,6 +2,7 @@ package layout;
 
 import data.MDate;
 import dataholder.DataHolder;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -15,6 +16,7 @@ public class ModifyDateLayout extends TabLayout {
 	private ComboBox<MDate> datesCB;
 	private Button insertBtn, deleteBtn, updateBtn, printBtn;
 	private TableView<MDate> datesTable;
+	private Alert alert;
 
 	public ModifyDateLayout(DataHolder dataHolder) {
 		super("", dataHolder);
