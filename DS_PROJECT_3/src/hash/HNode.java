@@ -1,11 +1,5 @@
 package hash;
 
-enum Flag {
-	EMPTY,
-	DELETED,
-	FULL
-}
-
 public class HNode<T extends Comparable<T>> {
 	
 	private T data;
