@@ -2,6 +2,7 @@ package layout;
 
 import data.MDate;
 import dataholder.DataHolder;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -19,6 +20,7 @@ public class ModifyDateLayout extends TabLayout {
 	private Button insertBtn, deleteBtn, updateBtn, printBtn;
 	private TableView<MDate> datesTable;
 	private Alert alert;
+	private Label statusL;
 
 	public ModifyDateLayout(DataHolder dataHolder) {
 		super("", dataHolder);
@@ -41,6 +43,12 @@ public class ModifyDateLayout extends TabLayout {
 		upGrid.add(datePicker, 1, 0);
 		upGrid.add(selectL, 0, 1);
 		upGrid.add(datesCB, 0, 1);
+		
+		GridPane downGrid = new GridPane(10, 10);
+		downGrid.add(insertBtn, 0, 0);
+		downGrid.add(updateBtn, 1, 0);
+		downGrid.add(deleteBtn, 2, 0);
+		downGrid.add(statusL, 1, 1);
 		
 		return null;
 	}
