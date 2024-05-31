@@ -9,6 +9,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 public class ModifyDateLayout extends TabLayout {
@@ -35,7 +36,11 @@ public class ModifyDateLayout extends TabLayout {
 		datesTable = new TableView<>();
 		alert = new Alert(AlertType.CONFIRMATION);
 		
-		
+		GridPane upGrid = new GridPane(10, 10);
+		upGrid.add(pickNewL, 0, 0);
+		upGrid.add(datePicker, 1, 0);
+		upGrid.add(chooseL, 0, 1);
+		upGrid.add(datesCB, 0, 1);
 		
 		return null;
 	}
