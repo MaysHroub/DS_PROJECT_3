@@ -57,7 +57,11 @@ public class ModifyDateLayout extends TabLayout {
 		
 		VBox leftBox = new VBox(20, upGrid, downGrid);
 		
-		return null;
+		BorderPane layout = new BorderPane();
+		layout.setLeft(leftBox);
+		layout.setRight(rightBox);
+		
+		return layout;
 	}
 
 	@Override
