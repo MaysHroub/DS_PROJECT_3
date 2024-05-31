@@ -1,9 +1,12 @@
 package layout;
 
 import dataholder.DataHolder;
+import javafx.scene.control.DatePicker;
 import javafx.scene.layout.Pane;
 
 public class ModifyDateLayout extends TabLayout {
+	
+	private DatePicker datePicker;
 
 	public ModifyDateLayout(DataHolder dataHolder) {
 		super("", dataHolder);
