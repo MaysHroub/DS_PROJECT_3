@@ -2,6 +2,8 @@ package layout;
 
 import data.MDate;
 import dataholder.DataHolder;
+import hash.Flag;
+import hash.QuadraticOHash;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -73,9 +75,12 @@ public class ModifyDateLayout extends TabLayout {
 	}
 
 	private void fillDatesCB() {
-		// TODO Auto-generated method stub
-		
+		QuadraticOHash<MDate> dates = getDataHolder().getDates();
+		for (int i = 0; i < dates.getTableSize(); i++)
+			if (dates.get(i).getFlag() == Flag.FULL)
+				datesCB.getItems().add(dates.get(i).getData());
 	}
+	
 
 	@Override
 	public void updateContent() {
