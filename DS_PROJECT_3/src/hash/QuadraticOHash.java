@@ -8,7 +8,7 @@ public class QuadraticOHash<T extends Comparable<T>>  extends OpenAddressignHash
 	
 	@Override
 	public void add(T data) {
-		if (size == m/2) rehash();
+		if (availableData == m/2) rehash();
 		int index = Math.abs(data.hashCode()) % m;
 		int i = 0;
 		for (; table[(index + i * (i++)) % m].getFlag() != Flag.EMPTY && i <= m; collisions++);
@@ -18,7 +18,7 @@ public class QuadraticOHash<T extends Comparable<T>>  extends OpenAddressignHash
 			index = (index + (--i) * i) % m;
 			table[index].setData(data);
 			table[index].setFlag(Flag.FULL);
-			++size;
+			++availableData;
 		}
 	}
 	
