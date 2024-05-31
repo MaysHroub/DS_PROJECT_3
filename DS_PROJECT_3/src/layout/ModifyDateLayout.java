@@ -3,6 +3,7 @@ package layout;
 import data.MDate;
 import dataholder.DataHolder;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -32,6 +33,7 @@ public class ModifyDateLayout extends TabLayout {
 		printBtn = new Button("Print");
 		datesCB = new ComboBox<>();
 		datesTable = new TableView<>();
+		alert = new Alert(AlertType.CONFIRMATION);
 		
 		return null;
 	}
