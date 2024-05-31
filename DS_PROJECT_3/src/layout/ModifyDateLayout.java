@@ -1,5 +1,8 @@
 package layout;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import data.MDate;
 import data.Martyr;
 import dataholder.DataHolder;
@@ -88,8 +91,14 @@ public class ModifyDateLayout extends TabLayout {
 	}
 
 	private void insert() {
-		// TODO Auto-generated method stub
-
+		LocalDate selectedDate = datePicker.getValue();
+		if (selectedDate == null) {
+			statusL.setText("No date is selected");
+			return;
+		}
+		@SuppressWarnings("deprecation")
+		Date date = new Date(selectedDate.getYear() - 1900, selectedDate.getMonthValue() - 1, selectedDate.getDayOfMonth());
+		getDataHolder().getDates().add(new MDate(date));
 	}
 
 	private void fillDatesCB() {
