@@ -92,8 +92,12 @@ public class ModifyDateLayout extends TabLayout {
 	}
 
 	private void delete() {
-		// TODO Auto-generated method stub
-
+		MDate selectedDate = datesCB.getValue();
+		if (selectedDate == null) {
+			statusL.setText("No date is selected");
+			return;
+		}
+		getDataHolder().getDates().delete(selectedDate);
 	}
 
 	private void insert() {
