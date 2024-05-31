@@ -2,6 +2,7 @@ package dataholder;
 
 import data.MDate;
 import hash.Flag;
+import hash.HNode;
 import hash.QuadraticOHash;
 
 public class DataHolder {
@@ -14,6 +15,10 @@ public class DataHolder {
 	public DataHolder(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
 		moveDown();
+	}
+	
+	public QuadraticOHash<MDate> getDates() {
+		return dates;
 	}
 	
 	public void moveUp() {
