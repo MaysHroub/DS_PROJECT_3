@@ -27,7 +27,7 @@ public class ModifyDateLayout extends TabLayout {
 	@Override
 	protected Pane createLayout() {
 		Label pickNewL = new Label("Pick a new date: "),
-				chooseL = new Label("Choose a date: ");
+				selectL = new Label("Select a date: ");
 		insertBtn = new Button("Insert");
 		deleteBtn = new Button("Delete");
 		updateBtn = new Button("Update");
@@ -39,7 +39,7 @@ public class ModifyDateLayout extends TabLayout {
 		GridPane upGrid = new GridPane(10, 10);
 		upGrid.add(pickNewL, 0, 0);
 		upGrid.add(datePicker, 1, 0);
-		upGrid.add(chooseL, 0, 1);
+		upGrid.add(selectL, 0, 1);
 		upGrid.add(datesCB, 0, 1);
 		
 		return null;
