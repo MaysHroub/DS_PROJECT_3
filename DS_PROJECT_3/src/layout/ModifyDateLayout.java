@@ -25,7 +25,7 @@ public class ModifyDateLayout extends TabLayout {
 
 	@Override
 	protected Pane createLayout() {
-		Label insertL = new Label("Pick a date: "),
+		Label pickNewL = new Label("Pick a new date: "),
 				chooseL = new Label("Choose a date: ");
 		insertBtn = new Button("Insert");
 		deleteBtn = new Button("Delete");
@@ -34,6 +34,8 @@ public class ModifyDateLayout extends TabLayout {
 		datesCB = new ComboBox<>();
 		datesTable = new TableView<>();
 		alert = new Alert(AlertType.CONFIRMATION);
+		
+		
 		
 		return null;
 	}
