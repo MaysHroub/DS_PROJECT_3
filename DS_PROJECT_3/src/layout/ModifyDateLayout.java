@@ -41,20 +41,22 @@ public class ModifyDateLayout extends TabLayout {
 		Label pickNewL = new Label("Pick a new date: "),
 				selectL = new Label("Select a date: ");
 		statusL = new Label();
+		
 		insertBtn = new Button("Insert");
+		insertBtn.setOnAction(e -> insert());
 		deleteBtn = new Button("Delete");
 		updateBtn = new Button("Update");
 		printBtn = new Button("Print");
-		datesCB = new ComboBox<>();
-		alert = new Alert(AlertType.CONFIRMATION);
-		datesTable = new TableView<>();
 		
+		datesCB = new ComboBox<>();
 		fillDatesCB();
 		
+		alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Confirmation required");
 		alert.setHeaderText("Are you sure you want to proceed?");
 		alert.setContentText("This action cannot be undone :)");
 		
+		datesTable = new TableView<>();
 		TableColumn<HNode<MDate>, String> dateColumn = new TableColumn<>("Date");
 		TableColumn<HNode<MDate>, String> flagColumn = new TableColumn<>("Flag");
 		dateColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getData().toString()));
@@ -83,6 +85,11 @@ public class ModifyDateLayout extends TabLayout {
 		layout.setRight(rightBox);
 		
 		return layout;
+	}
+
+	private void insert() {
+		// TODO Auto-generated method stub
+
 	}
 
 	private void fillDatesCB() {
