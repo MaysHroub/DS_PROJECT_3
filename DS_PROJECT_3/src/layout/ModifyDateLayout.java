@@ -30,6 +30,7 @@ public class ModifyDateLayout extends TabLayout {
 	protected Pane createLayout() {
 		Label pickNewL = new Label("Pick a new date: "),
 				selectL = new Label("Select a date: ");
+		statusL = new Label();
 		insertBtn = new Button("Insert");
 		deleteBtn = new Button("Delete");
 		updateBtn = new Button("Update");
