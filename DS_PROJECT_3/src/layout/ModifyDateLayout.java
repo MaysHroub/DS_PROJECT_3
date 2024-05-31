@@ -91,9 +91,9 @@ public class ModifyDateLayout extends TabLayout {
 		return layout;
 	}
 
-	private Object delete() {
+	private void delete() {
 		// TODO Auto-generated method stub
-		return null;
+
 	}
 
 	private void insert() {
