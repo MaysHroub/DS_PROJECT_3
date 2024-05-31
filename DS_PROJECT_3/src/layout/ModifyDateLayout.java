@@ -56,6 +56,7 @@ public class ModifyDateLayout extends TabLayout {
 		updateBtn = new Button("Update");
 		updateBtn.setOnAction(e -> update());
 		printBtn = new Button("Print");
+		printBtn.setOnAction(e -> print());
 		
 		datesCB = new ComboBox<>();
 		fillDatesCB();
