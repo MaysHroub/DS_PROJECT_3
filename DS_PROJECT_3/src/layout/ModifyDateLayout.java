@@ -32,6 +32,8 @@ public class ModifyDateLayout extends TabLayout {
 		updateBtn = new Button("Update");
 		printBtn = new Button("Print");
 		
+		datesCB = new ComboBox<>();
+		
 		return null;
 	}
 
