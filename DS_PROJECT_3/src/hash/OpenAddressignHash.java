@@ -47,6 +47,10 @@ public abstract class OpenAddressignHash<T extends Comparable<T>> {
 		return null;
 	}
 	
+	public int getTableSize() {
+		return m;
+	}
+	
 	@SuppressWarnings("unchecked")
 	protected void rehash() {
 		int tempM = m;
