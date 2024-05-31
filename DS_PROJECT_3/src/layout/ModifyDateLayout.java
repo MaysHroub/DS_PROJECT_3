@@ -2,6 +2,7 @@ package layout;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Optional;
 
 import data.MDate;
 import data.Martyr;
@@ -15,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -99,9 +101,12 @@ public class ModifyDateLayout extends TabLayout {
 			statusL.setText("No date is selected");
 			return;
 		}
-		@SuppressWarnings("deprecation")
-		Date date = new Date(newDate.getYear() - 1900, newDate.getMonthValue() - 1, newDate.getDayOfMonth());
-		selectedDate.setDate(date);
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.isPresent() && result.get() == ButtonType.OK) {
+			@SuppressWarnings("deprecation")
+			Date date = new Date(newDate.getYear() - 1900, newDate.getMonthValue() - 1, newDate.getDayOfMonth());
+			selectedDate.setDate(date);
+		}
 	}
 
 	private void delete() {
@@ -110,7 +115,9 @@ public class ModifyDateLayout extends TabLayout {
 			statusL.setText("No date is selected");
 			return;
 		}
-		getDataHolder().getDates().delete(selectedDate);
+		Optional<ButtonType> result = alert.showAndWait();
+		if (result.isPresent() && result.get() == ButtonType.OK) 
+			getDataHolder().getDates().delete(selectedDate);
 	}
 
 	private void insert() {
