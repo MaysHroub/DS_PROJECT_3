@@ -41,6 +41,10 @@ public class ModifyDateLayout extends TabLayout {
 		datesTable = new TableView<>();
 		alert = new Alert(AlertType.CONFIRMATION);
 		
+		alert.setTitle("Confirmation required");
+		alert.setHeaderText("Are you sure you want to proceed?");
+		alert.setContentText("This action cannot be undone :)");
+		
 		GridPane upGrid = new GridPane(10, 10);
 		upGrid.add(pickNewL, 0, 0);
 		upGrid.add(datePicker, 1, 0);
