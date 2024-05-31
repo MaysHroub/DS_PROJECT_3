@@ -5,8 +5,12 @@ import hash.QuadraticOHash;
 
 public class DataHolder {
 	
-	private QuadraticOHash<MDate> table;
+	private QuadraticOHash<MDate> dates;
 	private MDate currentDate;
 
+	
+	public DataHolder(QuadraticOHash<MDate> dates) {
+		this.dates = dates;
+	}
 	
 }
