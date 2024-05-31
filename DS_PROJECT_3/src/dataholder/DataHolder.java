@@ -6,5 +6,7 @@ import hash.QuadraticOHash;
 public class DataHolder {
 	
 	private QuadraticOHash<MDate> table;
+	private MDate currentDate;
 
+	
 }
