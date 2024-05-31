@@ -93,7 +93,15 @@ public class ModifyDateLayout extends TabLayout {
 	}
 
 	private void update() {
-
+		MDate selectedDate = datesCB.getValue();
+		LocalDate newDate = datePicker.getValue();
+		if (selectedDate == null || newDate == null) {
+			statusL.setText("No date is selected");
+			return;
+		}
+		@SuppressWarnings("deprecation")
+		Date date = new Date(newDate.getYear() - 1900, newDate.getMonthValue() - 1, newDate.getDayOfMonth());
+		selectedDate.setDate(date);
 	}
 
 	private void delete() {
