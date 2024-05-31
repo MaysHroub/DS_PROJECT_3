@@ -12,7 +12,7 @@ public class ModifyDateLayout extends TabLayout {
 	
 	private DatePicker datePicker;
 	private ComboBox<MDate> datesCB;
-	private Button insertBtn, deleteBtn, updateBtn, printBtn, upBtn, downBtn;
+	private Button insertBtn, deleteBtn, updateBtn, printBtn;
 
 	public ModifyDateLayout(DataHolder dataHolder) {
 		super("", dataHolder);
