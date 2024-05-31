@@ -12,6 +12,8 @@ import hash.HNode;
 import hash.QuadraticOHash;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -95,7 +97,11 @@ public class ModifyDateLayout extends TabLayout {
 	}
 	
 	private void print() {
-		
+		ObservableList<HNode<MDate>> dateList = FXCollections.observableArrayList();
+		QuadraticOHash<MDate> dates = getDataHolder().getDates();
+		for (int i = 0; i < dates.getTableSize(); i++)
+			if (dates.get(i).getFlag() != Flag.EMPTY)
+				dateList.add(dates.get(i));
 	}
 
 	private void update() {
