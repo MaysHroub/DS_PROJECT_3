@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 public class ModifyDateLayout extends TabLayout {
 	
@@ -50,6 +51,8 @@ public class ModifyDateLayout extends TabLayout {
 		downGrid.add(updateBtn, 1, 0);
 		downGrid.add(deleteBtn, 2, 0);
 		downGrid.add(statusL, 1, 1);
+		
+		VBox vBox = new VBox(15, datesTable, printBtn);
 		
 		return null;
 	}
