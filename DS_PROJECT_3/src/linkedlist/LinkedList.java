@@ -29,28 +29,6 @@ public class LinkedList<T extends Comparable<T>> {
 		}
 	}
 	
-	public void recursiveInsert(T data) {
-		recursiveInsert(data, null, head);
-	}
-	
-	private void recursiveInsert(T data, Node<T> prev, Node<T> curr) {
-		if (curr == null || curr.getData().compareTo(data) >= 0) {
-			Node<T> newNode = new Node<>(data);
-			if (prev == null /*or curr == head*/) {  // insert first
-				newNode.setNext(head);
-				head = newNode;
-			}
-			else if (curr == null)   // insert last
-				prev.setNext(newNode);
-			else {                   // insert between
-				newNode.setNext(curr);
-				prev.setNext(newNode);
-			}
-		}
-		else
-			recursiveInsert(data, curr, curr.getNext());
-	}
-	
 	public Node<T> find(T data) {
 		Node<T> curr = head;
 		for (; curr != null && curr.getData().compareTo(data) < 0;
@@ -58,18 +36,6 @@ public class LinkedList<T extends Comparable<T>> {
 		if (curr != null && curr.getData().compareTo(data) == 0)
 			return curr;
 		return null;
-	}
-	
-	public Node<T> recursiveFind(T data) {
-		return recursiveFind(data, head);
-	}
-	
-	private Node<T> recursiveFind(T data, Node<T> curr) {
-		if (curr == null || curr.getData().compareTo(data) > 0) 
-			return null;
-		if (curr != null && curr.getData().compareTo(data) == 0)
-			return curr;
-		return recursiveFind(data, curr.getNext());
 	}
 	
 	public Node<T> delete(T data) {
@@ -86,23 +52,6 @@ public class LinkedList<T extends Comparable<T>> {
 		return null;
 	}
 	
-	public Node<T> recursiveDelete(T data) {
-		return recursiveDelete(data, null, head);
-	}
-	
-	private Node<T> recursiveDelete(T data, Node<T> prev, Node<T> curr) {
-		if (curr == null || curr.getData().compareTo(data) > 0)
-			return null;
-		if (curr != null && curr.getData().compareTo(data) == 0) {
-			if (prev == null)  // delete the first node
-				head = curr.getNext();
-			else                // delete a middle node or the last node
-				prev.setNext(curr.getNext());
-			return curr;
-		}
-		return recursiveDelete(data, curr, curr.getNext());
-	}
-	
 	public int length() {
 		int count = 0;
 		Node<T> curr = head;
@@ -111,29 +60,6 @@ public class LinkedList<T extends Comparable<T>> {
 			curr = curr.getNext();
 		}
 		return count;
-	}
-	
-	public void reverse() {
-		Node<T> curr = head;
-		while (curr != null && curr.getNext() != null) {
-			Node<T> temp = curr.getNext();
-			curr.setNext(curr.getNext().getNext());
-			temp.setNext(head);
-			head = temp;
-		}
-	}
-	
-	public void recursiveReverse() {
-		recursiveReverse(head);
-	}
-	
-	private void recursiveReverse(Node<T> curr) {
-		if (curr == null || curr.getNext() == null) return;
-		Node<T> temp = curr.getNext();
-		curr.setNext(curr.getNext().getNext());
-		temp.setNext(head);
-		head = temp;
-		recursiveReverse(curr);
 	}
 	
 	public void traverse() {
