@@ -13,7 +13,8 @@ public class District implements Comparable<District> {
 	}
 	
 	public void insertLocation(String locationName) {
-		locations.insertSorted(locationName);
+		if (locations.find(locationName) == null)
+			locations.insertSorted(locationName);
 	}
 
 	@Override
