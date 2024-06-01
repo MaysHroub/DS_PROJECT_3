@@ -1,5 +1,6 @@
 package data;
 
+import linkedlist.LinkedList;
 import tree.TNode;
 
 public class MDateStat {
@@ -9,6 +10,7 @@ public class MDateStat {
 	private int sumAges;
 	private Martyr youngest, oldest;
 	private String DistrictWithMaxMartyr, LocationWithMaxMartyr;
+	private LinkedList<String> districts, locations;
 	
 	public MDateStat(MDate date) {
 		this.date = date;
