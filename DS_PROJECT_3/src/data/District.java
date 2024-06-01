@@ -17,6 +17,9 @@ public class District implements Comparable<District> {
 		return name.compareToIgnoreCase(o.name);
 	}
 	
-	
+	@Override
+	public String toString() {
+		return name;
+	}
 
 }
