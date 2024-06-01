@@ -31,6 +31,7 @@ public class MDateStat {
 		Node<String> curr = districts.getHead();
 		if (curr == null) return;
 		DistrictWithMaxMartyr = curr.getData();
+		int maxCount = 1, currCount = 1;
 		
 	}
 
