@@ -62,6 +62,10 @@ public class LinkedList<T extends Comparable<T>> {
 		return count;
 	}
 	
+	public void clear() {
+		head = null;
+	}
+	
 	public void traverse() {
 		Node<T> curr = head;
 		System.out.print("Head --> ");
