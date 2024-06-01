@@ -35,6 +35,8 @@ public class MDateStat {
 		if (youngest.getAge() > m.getAge()) youngest = m;
 		if (oldest.getAge() < m.getAge()) oldest = m;
 		sumAges += m.getAge();
+		districts.insertSorted(m.getDistrict());
+		locations.insertSorted(m.getLocation());
 		traverseMartyrs(curr.getRight());
 	}
 
