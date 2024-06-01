@@ -21,6 +21,7 @@ public class MDateStat {
 	
 	private void traverseMartyrs() {
 		youngest = oldest = date.getMartyrs().getRoot().getData();
+		districts.clear(); locations.clear();
 		traverseMartyrs(date.getMartyrs().getRoot());
 	}
 
