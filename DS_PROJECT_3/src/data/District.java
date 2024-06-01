@@ -2,7 +2,7 @@ package data;
 
 import linkedlist.LinkedList;
 
-public class District {
+public class District implements Comparable<District> {
 	
 	private String name;
 	private LinkedList<String> locations;
@@ -11,5 +11,7 @@ public class District {
 		this.name = name;
 		locations = new LinkedList<>();
 	}
+	
+	
 
 }
