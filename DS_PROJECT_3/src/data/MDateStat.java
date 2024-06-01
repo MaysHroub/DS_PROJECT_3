@@ -32,7 +32,9 @@ public class MDateStat {
 		if (curr == null) return;
 		DistrictWithMaxMartyr = curr.getData();
 		int maxCount = 1, currCount = 1;
-		
+		while (curr.getNext() != null) {
+			
+		}
 	}
 
 	private void traverseMartyrs(TNode<Martyr> curr) {
