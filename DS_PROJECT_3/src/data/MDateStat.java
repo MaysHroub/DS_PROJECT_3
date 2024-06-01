@@ -10,6 +10,10 @@ public class MDateStat {
 	public MDateStat(MDate date) {
 		this.date = date;
 	}
+	
+	private void traverseMartyrs() {
+		
+	}
 
 	public int getTotalMartyrs() {
 		return totalMartyrs;
