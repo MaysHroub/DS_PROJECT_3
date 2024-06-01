@@ -21,7 +21,10 @@ public class MDateStat {
 	private void traverseMartyrs(TNode<Martyr> curr) {
 		if (curr == null) return;
 		traverseMartyrs(curr.getLeft());
-		
+		totalMartyrs++;
+		Martyr m = curr.getData();
+		if (m.getGender() == 'F') totalFemales++;
+		else totalMales++;
 		traverseMartyrs(curr.getRight());
 	}
 
