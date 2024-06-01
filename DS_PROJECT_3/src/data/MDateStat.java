@@ -23,6 +23,11 @@ public class MDateStat {
 		youngest = oldest = date.getMartyrs().getRoot().getData();
 		districts.clear(); locations.clear();
 		traverseMartyrs(date.getMartyrs().getRoot());
+		findDistrictWithMaxMartyr();
+	}
+
+	private void findDistrictWithMaxMartyr() {
+		
 	}
 
 	private void traverseMartyrs(TNode<Martyr> curr) {
