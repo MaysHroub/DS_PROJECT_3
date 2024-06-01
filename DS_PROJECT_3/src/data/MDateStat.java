@@ -33,6 +33,8 @@ public class MDateStat {
 		DistrictWithMaxMartyr = curr.getData();
 		int maxCount = 1, currCount = 1;
 		while (curr.getNext() != null) {
+			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
+				currCount++;
 			
 		}
 	}
