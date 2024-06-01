@@ -27,6 +27,7 @@ public class MDateStat {
 		else totalMales++;
 		if (youngest.getAge() > m.getAge()) youngest = m;
 		if (oldest.getAge() < m.getAge()) oldest = m;
+		sumAges += m.getAge();
 		traverseMartyrs(curr.getRight());
 	}
 
