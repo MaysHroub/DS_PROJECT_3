@@ -11,6 +11,10 @@ public class District implements Comparable<District> {
 		this.name = name;
 		locations = new LinkedList<>();
 	}
+	
+	public void insertLocation(String locationName) {
+		locations.insertSorted(locationName);
+	}
 
 	@Override
 	public int compareTo(District o) {
