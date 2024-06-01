@@ -8,6 +8,7 @@ public class MDateStat {
 	private int totalMartyrs, totalFemales, totalMales;
 	private int sumAges;
 	private Martyr youngest, oldest;
+	private String DistrictWithMaxMartyr, LocationWithMaxMartyr;
 	
 	public MDateStat(MDate date) {
 		this.date = date;
