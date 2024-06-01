@@ -25,6 +25,8 @@ public class MDateStat {
 		Martyr m = curr.getData();
 		if (m.getGender() == 'F') totalFemales++;
 		else totalMales++;
+		if (youngest.getAge() > m.getAge()) youngest = m;
+		if (oldest.getAge() < m.getAge()) oldest = m;
 		traverseMartyrs(curr.getRight());
 	}
 
