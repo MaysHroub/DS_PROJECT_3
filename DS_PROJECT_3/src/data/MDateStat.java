@@ -1,5 +1,7 @@
 package data;
 
+import tree.TNode;
+
 public class MDateStat {
 	
 	private MDate date;
@@ -13,6 +15,11 @@ public class MDateStat {
 	
 	private void traverseMartyrs() {
 		youngest = oldest = date.getMartyrs().getRoot().getData();
+		traverseMartyrs(date.getMartyrs().getRoot());
+	}
+
+	private void traverseMartyrs(TNode<Martyr> curr) {
+		
 	}
 
 	public int getTotalMartyrs() {
