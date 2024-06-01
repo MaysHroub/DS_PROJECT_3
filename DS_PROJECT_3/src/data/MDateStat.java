@@ -42,6 +42,22 @@ public class MDateStat {
 			curr = curr.getNext();
 		}
 	}
+	
+	private void findLocationWithMaxMartyr() {
+		Node<String> curr = locations.getHead();
+		if (curr == null) return;
+		LocationWithMaxMartyr = curr.getData();
+		int maxCount = 1, currCount = 1;
+		while (curr.getNext() != null) {
+			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
+				currCount++;
+			else if (maxCount < currCount) {
+				maxCount = currCount;
+				LocationWithMaxMartyr = curr.getData();
+			}
+			curr = curr.getNext();
+		}
+	}
 
 	private void traverseMartyrs(TNode<Martyr> curr) {
 		if (curr == null) return;
