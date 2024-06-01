@@ -39,7 +39,7 @@ public class MDateStat {
 				maxCount = currCount;
 				DistrictWithMaxMartyr = curr.getData();
 			}
-			
+			curr = curr.getNext();
 		}
 	}
 
