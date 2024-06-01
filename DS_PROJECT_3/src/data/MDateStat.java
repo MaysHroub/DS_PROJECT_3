@@ -6,7 +6,7 @@ public class MDateStat {
 	
 	private MDate date;
 	private int totalMartyrs, totalFemales, totalMales;
-	private int avgAges;
+	private int sumAges;
 	private Martyr youngest, oldest;
 	
 	public MDateStat(MDate date) {
@@ -43,7 +43,7 @@ public class MDateStat {
 	}
 
 	public double getAvgAges() {
-		return avgAges;
+		return sumAges;
 	}
 
 	public Martyr getYoungest() {
