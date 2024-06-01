@@ -4,7 +4,7 @@ import linkedlist.LinkedList;
 import linkedlist.Node;
 import tree.TNode;
 
-public class MDateStat {
+public class MDateStat implements Stat {
 	
 	private MDate date;
 	private int totalMartyrs, totalFemales, totalMales;
