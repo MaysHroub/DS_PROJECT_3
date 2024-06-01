@@ -12,7 +12,7 @@ public class MDateStat {
 	}
 	
 	private void traverseMartyrs() {
-		
+		youngest = oldest = date.getMartyrs().getRoot().getData();
 	}
 
 	public int getTotalMartyrs() {
