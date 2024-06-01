@@ -11,6 +11,11 @@ public class District implements Comparable<District> {
 		this.name = name;
 		locations = new LinkedList<>();
 	}
+
+	@Override
+	public int compareTo(District o) {
+		return name.compareToIgnoreCase(o.name);
+	}
 	
 	
 
