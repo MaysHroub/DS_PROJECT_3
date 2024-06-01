@@ -6,7 +6,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	private TNode<T> root;
 	
 	// added setters and getters to be used in AVL class
-	protected TNode<T> getRoot() {
+	public TNode<T> getRoot() {
 		return root;
 	}
 	
