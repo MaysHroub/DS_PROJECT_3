@@ -7,4 +7,8 @@ public class MDateStat {
 	private double avgAges;
 	private Martyr youngest, oldest;
 	
+	public MDateStat(MDate date) {
+		this.date = date;
+	}
+	
 }
