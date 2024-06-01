@@ -10,10 +10,13 @@ public class MDateStat {
 	private int sumAges;
 	private Martyr youngest, oldest;
 	private String DistrictWithMaxMartyr, LocationWithMaxMartyr;
+	
 	private LinkedList<String> districts, locations;
+	
 	
 	public MDateStat(MDate date) {
 		this.date = date;
+		districts = locations = new LinkedList<>();
 	}
 	
 	private void traverseMartyrs() {
