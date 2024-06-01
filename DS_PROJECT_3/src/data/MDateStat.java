@@ -1,6 +1,7 @@
 package data;
 
 import linkedlist.LinkedList;
+import linkedlist.Node;
 import tree.TNode;
 
 public class MDateStat {
@@ -27,6 +28,7 @@ public class MDateStat {
 	}
 
 	private void findDistrictWithMaxMartyr() {
+		Node<String> curr = districts.getHead();
 		
 	}
 
