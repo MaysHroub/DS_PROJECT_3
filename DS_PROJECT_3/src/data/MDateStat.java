@@ -98,5 +98,13 @@ public class MDateStat {
 	public Martyr getOldest() {
 		return oldest;
 	}
+
+	public String getDistrictWithMaxMartyr() {
+		return DistrictWithMaxMartyr;
+	}
+
+	public String getLocationWithMaxMartyr() {
+		return LocationWithMaxMartyr;
+	}
 	
 }
