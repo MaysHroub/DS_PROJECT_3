@@ -106,5 +106,10 @@ public class MDateStat implements Stat {
 	public String getLocationWithMaxMartyr() {
 		return LocationWithMaxMartyr;
 	}
+
+	@Override
+	public void updateStats() {
+		traverseMartyrs();
+	}
 	
 }
