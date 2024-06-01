@@ -10,5 +10,29 @@ public class MDateStat {
 	public MDateStat(MDate date) {
 		this.date = date;
 	}
+
+	public int getTotalMartyrs() {
+		return totalMartyrs;
+	}
+
+	public int getTotalFemales() {
+		return totalFemales;
+	}
+
+	public int getTotalMales() {
+		return totalMales;
+	}
+
+	public double getAvgAges() {
+		return avgAges;
+	}
+
+	public Martyr getYoungest() {
+		return youngest;
+	}
+
+	public Martyr getOldest() {
+		return oldest;
+	}
 	
 }
