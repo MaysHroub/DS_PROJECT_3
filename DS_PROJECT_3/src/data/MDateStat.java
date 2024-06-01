@@ -44,7 +44,7 @@ public class MDateStat {
 	}
 
 	public double getAvgAges() {
-		return sumAges;
+		return sumAges / (double) totalMartyrs;
 	}
 
 	public Martyr getYoungest() {
