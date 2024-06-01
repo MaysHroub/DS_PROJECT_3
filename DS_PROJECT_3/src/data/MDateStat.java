@@ -25,6 +25,7 @@ public class MDateStat {
 		districts.clear(); locations.clear();
 		traverseMartyrs(date.getMartyrs().getRoot());
 		findDistrictWithMaxMartyr();
+		findLocationWithMaxMartyr();
 	}
 
 	private void findDistrictWithMaxMartyr() {
