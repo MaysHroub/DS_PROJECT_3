@@ -19,7 +19,10 @@ public class MDateStat {
 	}
 
 	private void traverseMartyrs(TNode<Martyr> curr) {
+		if (curr == null) return;
+		traverseMartyrs(curr.getLeft());
 		
+		traverseMartyrs(curr.getRight());
 	}
 
 	public int getTotalMartyrs() {
