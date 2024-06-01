@@ -5,6 +5,11 @@ public class LinkedList<T extends Comparable<T>> {
 
 	private Node<T> head;
 	
+	
+	public Node<T> getHead() {
+		return head;
+	}
+	
 	public void insertSorted(T data) {
 		Node<T> newNode = new Node<>(data);
 		
@@ -12,11 +17,9 @@ public class LinkedList<T extends Comparable<T>> {
 			head = newNode;
 			return;
 		}
-		
 		Node<T> prev = null, curr = head;
 		for (; curr != null && curr.getData().compareTo(data) < 0;
 				prev = curr, curr = curr.getNext());
-		
 		if (prev == null /*or curr == head*/) {  // insert first
 			newNode.setNext(head);
 			head = newNode;
