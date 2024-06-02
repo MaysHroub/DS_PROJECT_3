@@ -4,8 +4,11 @@ import data.MDateStat;
 import dataholder.DataHolder;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 public class NavigateDateLayout extends TabLayout {
 	
@@ -62,7 +65,10 @@ public class NavigateDateLayout extends TabLayout {
 		gp.add(l8, 0, 7);
 		gp.add(maxMartyrLocationL, 1, 7);
 		
-		
+		BorderPane layout = new BorderPane();
+		layout.setTop(currentDateL);
+		layout.setCenter(gp);
+		layout.setBottom(new VBox(10, upBtn, downBtn));
 		
 		return null;
 	}
