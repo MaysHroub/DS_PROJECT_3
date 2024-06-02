@@ -1,10 +1,14 @@
 package layout;
 
 import dataholder.DataHolder;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
 public class ModifyMartyrLayout extends TabLayout {
-
+	
+	private Label statusL;
+	
+	
 	public ModifyMartyrLayout(DataHolder dataHolder) {
 		super("Modify Martyrs", dataHolder);
 	}
