@@ -70,7 +70,7 @@ public class NavigateDateLayout extends TabLayout {
 		layout.setCenter(gp);
 		layout.setBottom(new VBox(10, upBtn, downBtn));
 		
-		return null;
+		return layout;
 	}
 	
 	private void fillLayoutWithData() {
