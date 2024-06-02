@@ -6,6 +6,7 @@ import tree.AVLTree;
 
 public class MDate implements Comparable<MDate> {
 	
+	private MDateStat stat;
 	private Date date;
 	private AVLTree<Martyr> martyrs;
 	
