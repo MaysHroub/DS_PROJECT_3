@@ -129,7 +129,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		DoublyLinkedList<District> districts = getDataHolder().getDistricts();
 		DNode<District> curr = districts.getHead();
 		while (curr != null) {
-			
+			districtsCB.getItems().add(curr.getData());
+			curr = curr.getNext();
 		}
 	} 
 
