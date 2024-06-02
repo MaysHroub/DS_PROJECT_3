@@ -21,7 +21,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	
 	private Label statusL, currentDateL;
 	private TextField nameTF, ageTF, sizeTF, heightTF;
-	private Button insertBtn, displaySizeHeightBtn, sortTableBtn, displayTableBtn;
+	private Button insertBtn, displaySizeHeightBtn, sortTableBtn, displayTableBtn, deleteBtn;
 	private RadioButton maleRB, femaleRB;
 	private ComboBox<District> districtsCB;
 	private ComboBox<String> locationsCB;
@@ -49,6 +49,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		heightTF = new TextField();
 		
 		insertBtn = new Button("Insert");
+		deleteBtn = new Button("Delete");
 		displaySizeHeightBtn = new Button("Display tree's size and height");
 		sortTableBtn = new Button("Sort by age");
 		displayTableBtn = new Button("Level order");
