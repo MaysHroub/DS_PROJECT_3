@@ -31,9 +31,18 @@ public class MDate implements Comparable<MDate> {
 		this.martyrs = martyrs;
 	}
 
+	public MDateStat getStat() {
+		return stat;
+	}
+
+	public void setStat(MDateStat stat) {
+		this.stat = stat;
+	}
+	
 	@Override
 	public int compareTo(MDate o) {
 		return date.compareTo(o.date);
 	}
+
 
 }
