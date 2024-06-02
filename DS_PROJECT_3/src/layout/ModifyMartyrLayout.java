@@ -90,6 +90,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		
 		return layout;
 	}
+	
+	private void insertMartyr() {
+		
+	}
 
 	@Override
 	public void updateContent() {
