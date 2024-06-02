@@ -52,6 +52,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		insertBtn.setOnAction(e -> insertMartyr());
 		deleteBtn = new Button("Delete selected");
 		displaySizeHeightBtn = new Button("Display tree's size and height");
+		displaySizeHeightBtn.setOnAction(e -> {
+			sizeTF.setText(getDataHolder().getCurrentDate().getMartyrs().size() + "");
+			heightTF.setText(getDataHolder().getCurrentDate().getMartyrs().height() + "");
+		});
 		sortTableBtn = new Button("Sort by age");
 		displayTableBtn = new Button("Level order");
 		
