@@ -47,6 +47,7 @@ public class NavigateDateLayout extends TabLayout {
 		upBtn = new Button("UP ↑");
 		upBtn.setOnAction(e -> moveUp());
 		downBtn = new Button("DOWN ↓");
+		downBtn.setOnAction(e -> moveDown());
 		
 		GridPane gp = new GridPane(10, 10);
 		gp.add(l1, 0, 0);
@@ -80,6 +81,9 @@ public class NavigateDateLayout extends TabLayout {
 		return layout;
 	}
 	
+	private void moveDown() {
+	}
+
 	private void moveUp() {
 		getDataHolder().moveUp();
 		fillLayoutWithData();
