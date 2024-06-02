@@ -1,5 +1,7 @@
 package tree;
 
+import queue.LinkedListQueue;
+import trees.TNode;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 	
@@ -45,6 +47,18 @@ public class BinarySearchTree<T extends Comparable<T>> {
 		traversePreOrder(curr.getLeft());
 		traversePreOrder(curr.getRight());
 		System.out.print(curr + " ");
+	}
+	
+	public void traverseLevelOrder() {
+		if (root == null) return;
+		LinkedListQueue<TNode<T>> queue = new LinkedListQueue<>();
+		queue.enqueue(root);
+		while (!queue.isEmpty()) {
+			TNode<T> curr = queue.dequeue();
+			System.out.print(curr + " ");
+			if (curr.hasLeft()) queue.enqueue(curr.getLeft());
+			if (curr.hasRight()) queue.enqueue(curr.getRight());
+		}
 	}
 	
 	public TNode<T> find(T data) {
