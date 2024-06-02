@@ -66,6 +66,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(insertBtn, 2, 0);
 		gp.add(l2, 0, 1);
 		gp.add(ageTF, 1, 1);
+		gp.add(statusL, 2, 1);
 		gp.add(l3, 0, 2);
 		gp.add(new HBox(15, maleRB, femaleRB), 1, 2);
 		gp.add(l4, 0, 3);
@@ -76,6 +77,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(new HBox(10, l6, heightTF), 2, 4);
 		
 		VBox vBox = new VBox(15, martyrsTable, new HBox(10, sortTableBtn, displayTableBtn));
+		
 		
 		return null;
 	}
