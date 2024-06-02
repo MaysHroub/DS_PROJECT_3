@@ -36,6 +36,9 @@ public class NavigateDateLayout extends TabLayout {
 		maxMartyrDistrictL = new Label();
 		maxMartyrLocationL = new Label();
 		
+		upBtn = new Button("UP ↑");
+		downBtn = new Button("DOWN ↓");
+		
 		return null;
 	}
 
