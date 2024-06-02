@@ -79,7 +79,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(new HBox(10, l5, sizeTF), 1, 4);
 		gp.add(new HBox(10, l6, heightTF), 2, 4);
 		
-		VBox vBox = new VBox(15, martyrsTable, new HBox(10, sortTableBtn, displayTableBtn));
+		VBox vBox = new VBox(15, martyrsTable, new HBox(10, sortTableBtn, displayTableBtn, deleteBtn));
 		
 		BorderPane layout = new BorderPane();
 		layout.setTop(currentDateL);
