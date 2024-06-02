@@ -4,6 +4,7 @@ import data.MDateStat;
 import dataholder.DataHolder;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 public class NavigateDateLayout extends TabLayout {
@@ -39,6 +40,24 @@ public class NavigateDateLayout extends TabLayout {
 		
 		upBtn = new Button("UP ↑");
 		downBtn = new Button("DOWN ↓");
+		
+		GridPane gp = new GridPane(10, 10);
+		gp.add(l1, 0, 0);
+		gp.add(totalL, 1, 0);
+		gp.add(l2, 0, 1);
+		gp.add(totalMalesL, 1, 1);
+		gp.add(l3, 0, 2);
+		gp.add(totalFemalesL, 1, 2);
+		gp.add(l4, 0, 3);
+		gp.add(avgAgesL, 1, 3);
+		gp.add(l5, 0, 4);
+		gp.add(youngestMartyrL, 1, 4);
+		gp.add(l6, 0, 5);
+		gp.add(oldestMartyrL, 1, 5);
+		gp.add(l7, 0, 6);
+		gp.add(maxMartyrDistrictL, 1, 6);
+		gp.add(l8, 0, 7);
+		gp.add(maxMartyrLocationL, 1, 7);
 		
 		return null;
 	}
