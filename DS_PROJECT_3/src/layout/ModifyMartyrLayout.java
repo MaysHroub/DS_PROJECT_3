@@ -98,6 +98,10 @@ public class ModifyMartyrLayout extends TabLayout {
 			statusL.setText("No enough information :/");
 			return;
 		}
+		if (!ageTF.getText().matches("[0-9]+")) {
+			statusL.setText("You must enter a number for age text-field");
+			return;
+		}
 	}
 
 	@Override
