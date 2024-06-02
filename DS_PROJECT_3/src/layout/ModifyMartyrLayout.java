@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.Pane;
 
 public class ModifyMartyrLayout extends TabLayout {
@@ -46,6 +47,12 @@ public class ModifyMartyrLayout extends TabLayout {
 		displaySizeHeightBtn = new Button("Display tree's size and height");
 		sortTableBtn = new Button("Sort by age");
 		displayTableBtn = new Button("Level order");
+		
+		maleRB = new RadioButton("Male");
+		femaleRB = new RadioButton("Female");
+		ToggleGroup toggleGroup = new ToggleGroup();
+		maleRB.setToggleGroup(toggleGroup);
+		femaleRB.setToggleGroup(toggleGroup);
 		
 		return null;
 	}
