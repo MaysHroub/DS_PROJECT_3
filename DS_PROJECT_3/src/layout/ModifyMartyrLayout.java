@@ -92,7 +92,12 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void insertMartyr() {
-		
+		if (nameTF.getText().isEmpty() || ageTF.getText().isEmpty() ||
+				districtsCB.getValue() == null || locationsCB.getValue() == null ||
+				!maleRB.isSelected() && !femaleRB.isSelected()) {
+			statusL.setText("No enough information :/");
+			return;
+		}
 	}
 
 	@Override
