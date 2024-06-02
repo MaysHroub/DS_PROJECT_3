@@ -1,15 +1,20 @@
 package layout;
 
 import data.District;
+import data.MDate;
 import data.Martyr;
 import dataholder.DataHolder;
 import doublylinkedlist.DNode;
 import doublylinkedlist.DoublyLinkedList;
+import hash.HNode;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
@@ -37,6 +42,20 @@ public class ModifyMartyrLayout extends TabLayout {
 
 	@Override
 	protected Pane createLayout() {
+		martyrsTable = new TableView<>();
+		TableColumn<Martyr, String> nameColumn = new TableColumn<>("Name");
+		TableColumn<Martyr, Integer> ageColumn = new TableColumn<>("Age");
+		TableColumn<Martyr, String> genderColumn = new TableColumn<>("Gender");
+		TableColumn<Martyr, String> districtColumn = new TableColumn<>("District");
+		TableColumn<Martyr, String> locationColumn = new TableColumn<>("Location");
+		nameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getName()));
+		ageColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getAge()).asObject());
+		genderColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getGender() + ""));
+		districtColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getDistrict()));
+		locationColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getLocation()));
+		martyrsTable.getColumns().addAll(nameColumn, ageColumn, genderColumn, districtColumn, locationColumn);
+		martyrsTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+		
 		statusL = currentDateL = new Label();
 		
 		Label l1 = new Label("Enter martyr's name:"),
