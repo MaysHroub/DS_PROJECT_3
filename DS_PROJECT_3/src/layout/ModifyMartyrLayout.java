@@ -3,6 +3,7 @@ package layout;
 import data.District;
 import data.Martyr;
 import dataholder.DataHolder;
+import doublylinkedlist.DoublyLinkedList;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -121,6 +122,10 @@ public class ModifyMartyrLayout extends TabLayout {
 	public void updateContent() {
 		// TODO Auto-generated method stub
 
+	}
+	
+	private void fillDistrictsCB() {
+		
 	}
 
 }
