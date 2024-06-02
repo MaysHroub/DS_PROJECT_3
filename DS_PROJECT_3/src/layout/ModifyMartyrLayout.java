@@ -17,7 +17,7 @@ import javafx.scene.layout.VBox;
 
 public class ModifyMartyrLayout extends TabLayout {
 	
-	private Label statusL;
+	private Label statusL, currentDateL;
 	private TextField nameTF, ageTF, sizeTF, heightTF;
 	private Button insertBtn, displaySizeHeightBtn, sortTableBtn, displayTableBtn;
 	private RadioButton maleRB, femaleRB;
