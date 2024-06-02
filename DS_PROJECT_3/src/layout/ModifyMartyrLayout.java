@@ -37,6 +37,11 @@ public class ModifyMartyrLayout extends TabLayout {
 				l5 = new Label("Size:"),
 				l6 = new Label("Height:");
 		
+		nameTF = new TextField();
+		ageTF = new TextField();
+		sizeTF = new TextField();
+		heightTF = new TextField();
+		
 		return null;
 	}
 
