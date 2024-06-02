@@ -133,5 +133,9 @@ public class ModifyMartyrLayout extends TabLayout {
 			curr = curr.getNext();
 		}
 	} 
+	
+	private void fillLocationsCB(District district) {
+		
+	}
 
 }
