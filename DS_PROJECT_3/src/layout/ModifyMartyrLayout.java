@@ -18,6 +18,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import linkedlist.Node;
 
 public class ModifyMartyrLayout extends TabLayout {
 	
@@ -135,7 +136,11 @@ public class ModifyMartyrLayout extends TabLayout {
 	} 
 	
 	private void fillLocationsCB(District district) {
-		
+		Node<String> curr = district.getLocations().getHead();
+		while (curr != null) {
+			locationsCB.getItems().add(curr.getData());
+			curr = curr.getNext();
+		}
 	}
 
 }
