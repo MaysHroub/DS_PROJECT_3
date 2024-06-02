@@ -43,7 +43,17 @@ public class NavigateDateLayout extends TabLayout {
 	}
 	
 	private void fillLayoutWithData() {
-		
+		DataHolder dataHolder = getDataHolder();
+		if (dataHolder.getCurrentDate() == null) {
+			totalL.setText("");
+			totalMalesL.setText("");
+			totalFemalesL.setText("");
+			avgAgesL.setText("");
+			youngestMartyrL.setText("");
+			oldestMartyrL.setText("");
+			maxMartyrDistrictL.setText("");
+			maxMartyrLocationL.setText("");
+		}
 	}
 
 	@Override
