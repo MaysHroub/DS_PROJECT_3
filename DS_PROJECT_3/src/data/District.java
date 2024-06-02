@@ -12,6 +12,10 @@ public class District implements Comparable<District> {
 		locations = new LinkedList<>();
 	}
 	
+	public LinkedList<String> getLocations() {
+		return locations;
+	}
+	
 	public void insertLocation(String locationName) {
 		if (locations.find(locationName) == null)
 			locations.insertSorted(locationName);
