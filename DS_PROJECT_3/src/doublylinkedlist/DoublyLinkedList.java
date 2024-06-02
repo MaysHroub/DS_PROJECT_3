@@ -3,6 +3,11 @@ package doublylinkedlist;
 public class DoublyLinkedList<T extends Comparable<T>> {
 
 	private DNode<T> head;
+	
+	
+	public DNode<T> getHead() {
+		return head;
+	}
 
 	public void insert(T data) {
 		DNode<T> newNode = new DNode<>(data), curr = head;
