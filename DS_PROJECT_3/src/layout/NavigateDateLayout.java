@@ -53,6 +53,7 @@ public class NavigateDateLayout extends TabLayout {
 			oldestMartyrL.setText("");
 			maxMartyrDistrictL.setText("");
 			maxMartyrLocationL.setText("");
+			return;
 		}
 	}
 
