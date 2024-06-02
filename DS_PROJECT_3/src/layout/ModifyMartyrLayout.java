@@ -102,6 +102,13 @@ public class ModifyMartyrLayout extends TabLayout {
 			statusL.setText("You must enter a number for age text-field");
 			return;
 		}
+		String name = nameTF.getText();
+		int age = Integer.valueOf(ageTF.getText());
+		char gender = (maleRB.isSelected()) ? 'M' : 'F';
+		String district = districtsCB.getValue().toString(),
+				location = locationsCB.getValue();
+		getDataHolder().getCurrentDate().getMartyrs().insert(
+				new Martyr(name, district, location, gender, age));
 	}
 
 	@Override
