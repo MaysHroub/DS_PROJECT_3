@@ -3,6 +3,7 @@ package layout;
 import data.District;
 import data.Martyr;
 import dataholder.DataHolder;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -83,6 +84,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		layout.setTop(currentDateL);
 		layout.setCenter(gp);
 		layout.setRight(vBox);
+		
+		BorderPane.setAlignment(vBox, Pos.CENTER);
 		
 		return null;
 	}
