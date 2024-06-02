@@ -54,6 +54,9 @@ public class ModifyMartyrLayout extends TabLayout {
 		maleRB.setToggleGroup(toggleGroup);
 		femaleRB.setToggleGroup(toggleGroup);
 		
+		districtsCB = new ComboBox<>();
+		locationsCB = new ComboBox<>();
+		
 		return null;
 	}
 
