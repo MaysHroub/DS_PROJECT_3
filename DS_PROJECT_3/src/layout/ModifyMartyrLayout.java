@@ -10,6 +10,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
 public class ModifyMartyrLayout extends TabLayout {
@@ -56,6 +58,22 @@ public class ModifyMartyrLayout extends TabLayout {
 		
 		districtsCB = new ComboBox<>();
 		locationsCB = new ComboBox<>();
+		
+		GridPane gp = new GridPane(10, 10);
+		gp.add(l1, 0, 0);
+		gp.add(nameTF, 1, 0);
+		gp.add(insertBtn, 2, 0);
+		gp.add(l2, 0, 1);
+		gp.add(ageTF, 1, 1);
+		gp.add(l3, 0, 2);
+		gp.add(new HBox(15, maleRB, femaleRB), 1, 2);
+		gp.add(l4, 0, 3);
+		gp.add(districtsCB, 1, 3);
+		gp.add(locationsCB, 2, 3);
+		gp.add(displaySizeHeightBtn, 0, 4);
+		gp.add(new HBox(10, l5, sizeTF), 1, 4);
+		gp.add(new HBox(10, l6, heightTF), 2, 4);
+		
 		
 		return null;
 	}
