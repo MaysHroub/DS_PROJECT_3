@@ -10,6 +10,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -78,6 +79,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		
 		VBox vBox = new VBox(15, martyrsTable, new HBox(10, sortTableBtn, displayTableBtn));
 		
+		BorderPane layout = new BorderPane();
+		layout.setTop(currentDateL);
+		layout.setCenter(gp);
+		layout.setRight(vBox);
 		
 		return null;
 	}
