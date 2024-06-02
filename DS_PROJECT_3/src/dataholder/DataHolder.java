@@ -45,5 +45,13 @@ public class DataHolder {
 	public MDate getCurrentDate() {
 		return currentDate;
 	}
+
+	public DoublyLinkedList<District> getDistricts() {
+		return districts;
+	}
+
+	public void setDistricts(DoublyLinkedList<District> districts) {
+		this.districts = districts;
+	}
 	
 }
