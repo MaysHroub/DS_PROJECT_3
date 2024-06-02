@@ -41,6 +41,10 @@ public class NavigateDateLayout extends TabLayout {
 		
 		return null;
 	}
+	
+	private void fillLayoutWithData() {
+		
+	}
 
 	@Override
 	public void updateContent() {
