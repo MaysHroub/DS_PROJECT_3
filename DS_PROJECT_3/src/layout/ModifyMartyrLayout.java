@@ -109,6 +109,7 @@ public class ModifyMartyrLayout extends TabLayout {
 				location = locationsCB.getValue();
 		getDataHolder().getCurrentDate().getMartyrs().insert(
 				new Martyr(name, district, location, gender, age));
+		statusL.setText("Martyr " + name + " is inserted :)");
 	}
 
 	@Override
