@@ -87,7 +87,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		
 		BorderPane.setAlignment(vBox, Pos.CENTER);
 		
-		return null;
+		return layout;
 	}
 
 	@Override
