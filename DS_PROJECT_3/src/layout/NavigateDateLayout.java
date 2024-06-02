@@ -82,6 +82,8 @@ public class NavigateDateLayout extends TabLayout {
 	}
 	
 	private void moveDown() {
+		getDataHolder().moveDown();
+		fillLayoutWithData();
 	}
 
 	private void moveUp() {
