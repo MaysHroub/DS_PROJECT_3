@@ -1,7 +1,5 @@
 package tree;
 
-import queue.LinkedListQueue;
-import trees.TNode;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 	
