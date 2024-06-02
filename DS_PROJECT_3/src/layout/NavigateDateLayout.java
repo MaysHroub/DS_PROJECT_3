@@ -5,7 +5,7 @@ import javafx.scene.layout.Pane;
 
 public class NavigateDateLayout extends TabLayout {
 
-	protected NavigateDateLayout(DataHolder dataHolder) {
+	public NavigateDateLayout(DataHolder dataHolder) {
 		super("Date Navigation", dataHolder);
 	}
 
