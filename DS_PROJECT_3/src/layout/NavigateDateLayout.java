@@ -27,6 +27,15 @@ public class NavigateDateLayout extends TabLayout {
 				l7 = new Label("District with maximum martyrs:"),
 				l8 = new Label("Location wiht maximum martyrs:");
 		
+		totalL = new Label();
+		totalMalesL = new Label();
+		totalFemalesL = new Label();
+		avgAgesL = new Label();
+		youngestMartyrL = new Label();
+		oldestMartyrL = new Label();
+		maxMartyrDistrictL = new Label();
+		maxMartyrLocationL = new Label();
+		
 		return null;
 	}
 
