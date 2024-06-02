@@ -13,6 +13,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 public class ModifyMartyrLayout extends TabLayout {
 	
@@ -74,6 +75,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(new HBox(10, l5, sizeTF), 1, 4);
 		gp.add(new HBox(10, l6, heightTF), 2, 4);
 		
+		VBox vBox = new VBox(15, martyrsTable, new HBox(10, sortTableBtn, displayTableBtn));
 		
 		return null;
 	}
