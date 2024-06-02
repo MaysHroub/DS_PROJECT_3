@@ -11,13 +11,22 @@ public class NavigateDateLayout extends TabLayout {
 					youngestMartyrL, oldestMartyrL, maxMartyrDistrictL, maxMartyrLocationL;
 	private Button upBtn, downBtn;
 
+	
 	public NavigateDateLayout(DataHolder dataHolder) {
 		super("Date Navigation", dataHolder);
 	}
 
 	@Override
 	protected Pane createLayout() {
-		// TODO Auto-generated method stub
+		Label l1 = new Label("Total number of Martyrs:"),
+				l2 = new Label("Total number of Males:"),
+				l3 = new Label("Total number of Females:"),
+				l4 = new Label("Average ages:"),
+				l5 = new Label("Youngest Martyr:"),
+				l6 = new Label("Oldest Martyr:"),
+				l7 = new Label("District with maximum martyrs:"),
+				l8 = new Label("Location wiht maximum martyrs:");
+		
 		return null;
 	}
 
