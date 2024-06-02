@@ -1,8 +1,13 @@
 package layout;
 
+import dataholder.DataHolder;
 import javafx.scene.layout.Pane;
 
 public class ModifyMartyrLayout extends TabLayout {
+
+	public ModifyMartyrLayout(DataHolder dataHolder) {
+		super("Modify Martyrs", dataHolder);
+	}
 
 	@Override
 	protected Pane createLayout() {
