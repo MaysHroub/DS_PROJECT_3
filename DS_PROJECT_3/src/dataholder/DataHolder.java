@@ -1,8 +1,9 @@
 package dataholder;
 
+import data.District;
 import data.MDate;
+import doublylinkedlist.DoublyLinkedList;
 import hash.Flag;
-import hash.HNode;
 import hash.QuadraticOHash;
 
 public class DataHolder {
@@ -10,6 +11,8 @@ public class DataHolder {
 	private QuadraticOHash<MDate> dates;
 	private MDate currentDate;
 	private int currentIdx;
+	
+	private DoublyLinkedList<District> districts;
 
 	
 	public DataHolder(QuadraticOHash<MDate> dates) {
