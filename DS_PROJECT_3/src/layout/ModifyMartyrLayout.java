@@ -49,6 +49,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		heightTF = new TextField();
 		
 		insertBtn = new Button("Insert");
+		insertBtn.setOnAction(e -> insertMartyr());
 		deleteBtn = new Button("Delete selected");
 		displaySizeHeightBtn = new Button("Display tree's size and height");
 		sortTableBtn = new Button("Sort by age");
