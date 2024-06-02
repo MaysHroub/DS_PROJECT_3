@@ -69,6 +69,11 @@ public class ModifyMartyrLayout extends TabLayout {
 		femaleRB.setToggleGroup(toggleGroup);
 		
 		districtsCB = new ComboBox<>();
+		districtsCB.setOnAction(e -> {
+			if (districtsCB.getValue() == null) return;
+			locationsCB.getSelectionModel().clearSelection();
+			fillLocationsCB(districtsCB.getValue());
+		});
 		locationsCB = new ComboBox<>();
 		
 		GridPane gp = new GridPane(10, 10);
