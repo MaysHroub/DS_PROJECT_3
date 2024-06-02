@@ -3,6 +3,7 @@ package layout;
 import data.District;
 import data.Martyr;
 import dataholder.DataHolder;
+import doublylinkedlist.DNode;
 import doublylinkedlist.DoublyLinkedList;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -125,7 +126,11 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillDistrictsCB() {
-		
-	}
+		DoublyLinkedList<District> districts = getDataHolder().getDistricts();
+		DNode<District> curr = districts.getHead();
+		while (curr != null) {
+			
+		}
+	} 
 
 }
