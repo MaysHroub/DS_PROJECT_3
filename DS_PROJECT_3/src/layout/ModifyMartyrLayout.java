@@ -28,7 +28,7 @@ public class ModifyMartyrLayout extends TabLayout {
 
 	@Override
 	protected Pane createLayout() {
-		// TODO Auto-generated method stub
+		statusL = new Label();
 		return null;
 	}
 
