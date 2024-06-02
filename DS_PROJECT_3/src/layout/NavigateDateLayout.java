@@ -10,7 +10,9 @@ import javafx.scene.layout.Pane;
 public class NavigateDateLayout extends TabLayout {
 	
 	private Label totalL, totalMalesL, totalFemalesL, avgAgesL,
-					youngestMartyrL, oldestMartyrL, maxMartyrDistrictL, maxMartyrLocationL;
+					youngestMartyrL, oldestMartyrL,
+					maxMartyrDistrictL, maxMartyrLocationL,
+					currentDateL;
 	private Button upBtn, downBtn;
 
 	
@@ -37,6 +39,7 @@ public class NavigateDateLayout extends TabLayout {
 		oldestMartyrL = new Label();
 		maxMartyrDistrictL = new Label();
 		maxMartyrLocationL = new Label();
+		currentDateL = new Label();
 		
 		upBtn = new Button("UP ↑");
 		downBtn = new Button("DOWN ↓");
@@ -58,6 +61,8 @@ public class NavigateDateLayout extends TabLayout {
 		gp.add(maxMartyrDistrictL, 1, 6);
 		gp.add(l8, 0, 7);
 		gp.add(maxMartyrLocationL, 1, 7);
+		
+		
 		
 		return null;
 	}
