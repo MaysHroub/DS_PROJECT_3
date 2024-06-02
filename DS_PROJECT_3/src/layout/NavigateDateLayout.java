@@ -105,8 +105,7 @@ public class NavigateDateLayout extends TabLayout {
 
 	@Override
 	public void updateContent() {
-		// TODO Auto-generated method stub
-
+		fillLayoutWithData();
 	}
 
 }
