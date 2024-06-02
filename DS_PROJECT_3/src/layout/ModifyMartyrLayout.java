@@ -1,11 +1,13 @@
 package layout;
 
 import data.District;
+import data.Martyr;
 import dataholder.DataHolder;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
@@ -17,6 +19,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	private RadioButton maleRB, femaleRB;
 	private ComboBox<District> districtsCB;
 	private ComboBox<String> locationsCB;
+	private TableView<Martyr> martyrsTable;
 	
 	
 	public ModifyMartyrLayout(DataHolder dataHolder) {
