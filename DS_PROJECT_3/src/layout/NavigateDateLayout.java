@@ -1,5 +1,6 @@
 package layout;
 
+import data.MDateStat;
 import dataholder.DataHolder;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -55,6 +56,15 @@ public class NavigateDateLayout extends TabLayout {
 			maxMartyrLocationL.setText("");
 			return;
 		}
+		MDateStat stat = dataHolder.getCurrentDate().getStat();
+		totalL.setText(stat.getTotalMartyrs() + "");
+		totalMalesL.setText(stat.getTotalMales() + "");
+		totalFemalesL.setText(stat.getTotalFemales() + "");
+		avgAgesL.setText(stat.getAvgAges() + "");
+		youngestMartyrL.setText(stat.getYoungest().toString());
+		oldestMartyrL.setText(stat.getOldest().toString());
+		maxMartyrDistrictL.setText(stat.getDistrictWithMaxMartyr());
+		maxMartyrLocationL.setText(stat.getLocationWithMaxMartyr());
 	}
 
 	@Override
