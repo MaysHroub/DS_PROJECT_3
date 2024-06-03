@@ -170,6 +170,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		Martyr[] arr = new Martyr[martyrs.size()];
 		martyrs.toArray(arr);
 		Martyr.heapSortAsc(arr);
+		martyrs = FXCollections.observableArrayList(arr);
 	}
 
 	@Override
