@@ -96,7 +96,9 @@ public class ModifyMartyrLayout extends TabLayout {
 		nameTF = new TextField();
 		ageTF = new TextField();
 		sizeTF = new TextField();
+		sizeTF.setPrefColumnCount(5);
 		heightTF = new TextField();
+		heightTF.setPrefColumnCount(5);
 		
 		insertBtn = new Button("Insert");
 		insertBtn.setOnAction(e -> insertMartyr());
