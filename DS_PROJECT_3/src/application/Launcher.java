@@ -41,7 +41,8 @@ public class Launcher extends Application {
 			in.nextLine(); // 0.name, 1.event, 2.age, 3.location, 4.district, 5.gender
 			while (in.hasNext()) {
 				String[] tokens = in.nextLine().split(",");
-
+				if (tokens[2].length() == 0)  // no age
+					continue;
 			}
 			
 		} catch (FileNotFoundException e) {
