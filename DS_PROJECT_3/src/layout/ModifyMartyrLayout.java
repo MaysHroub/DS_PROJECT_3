@@ -80,6 +80,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		insertBtn = new Button("Insert");
 		insertBtn.setOnAction(e -> insertMartyr());
 		deleteBtn = new Button("Delete selected");
+		deleteBtn.setOnAction(e -> deleteMartyr());
 		displaySizeHeightBtn = new Button("Display tree's size and height");
 		displaySizeHeightBtn.setOnAction(e -> {
 			sizeTF.setText(getDataHolder().getCurrentDate().getMartyrs().size() + "");
