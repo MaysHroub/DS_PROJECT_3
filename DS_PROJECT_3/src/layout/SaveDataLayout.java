@@ -9,6 +9,7 @@ import data.MDate;
 import data.Martyr;
 import dataholder.DataHolder;
 import hash.Flag;
+import hash.HNode;
 import hash.QuadraticOHash;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -59,8 +60,14 @@ public class SaveDataLayout extends TabLayout {
 		}
 	}
 	
-	private void writeDates() {
-		
+	private void writeDates(PrintWriter out) {
+		QuadraticOHash<MDate> dates = getDataHolder().getDates();
+		int m = dates.getTableSize();
+		for (int i = 0; i < m; i++) {
+			HNode<MDate> date = dates.get(i);
+			if (date.getFlag() == Flag.FULL)
+				writeMartyrs(date.getData().getMartyrs().getRoot(), date.getData().getDate(), out);
+		}
 	}
 	
 	@SuppressWarnings("deprecation")
