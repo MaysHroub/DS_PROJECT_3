@@ -12,8 +12,8 @@ import layout.TabLayout;
 
 public class SaveScene extends TabScene {
 
-	public SaveScene(SceneManager manager, SceneID id, int width, int height, TabLayout... layouts) {
-		super(manager, id, width, height, layouts);
+	public SaveScene(SceneManager manager, int width, int height, TabLayout... layouts) {
+		super(manager, SceneID.SAVE, width, height, layouts);
 	}
 
 	@Override

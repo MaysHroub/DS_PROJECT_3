@@ -12,8 +12,8 @@ import layout.TabLayout;
 
 public class MartyrDateScene extends TabScene {
 
-	public MartyrDateScene(SceneManager manager, SceneID id, int width, int height, TabLayout... layouts) {
-		super(manager, id, width, height, layouts);
+	public MartyrDateScene(SceneManager manager, int width, int height, TabLayout... layouts) {
+		super(manager, SceneID.MARTYR_DATE, width, height, layouts);
 	}
 
 	@Override
