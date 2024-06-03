@@ -10,6 +10,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -147,6 +148,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		layout.setTop(currentDateL);
 		layout.setCenter(gp);
 		layout.setRight(vBox);
+		layout.setPadding(new Insets(20));
 		
 		BorderPane.setAlignment(vBox, Pos.CENTER);
 		

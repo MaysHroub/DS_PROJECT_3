@@ -11,6 +11,7 @@ import hash.QuadraticOHash;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -96,6 +97,7 @@ public class ModifyDateLayout extends TabLayout {
 		BorderPane layout = new BorderPane();
 		layout.setLeft(leftBox);
 		layout.setRight(rightBox);
+		layout.setPadding(new Insets(20));
 		
 		return layout;
 	}

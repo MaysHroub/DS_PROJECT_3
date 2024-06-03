@@ -2,6 +2,7 @@ package layout;
 
 import data.MDateStat;
 import dataholder.DataHolder;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -75,6 +76,7 @@ public class NavigateDateLayout extends TabLayout {
 		layout.setTop(currentDateL);
 		layout.setCenter(gp);
 		layout.setBottom(vBox);
+		layout.setPadding(new Insets(20));
 		
 		BorderPane.setAlignment(currentDateL, Pos.CENTER);
 		
