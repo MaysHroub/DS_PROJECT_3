@@ -151,6 +151,9 @@ public class ModifyMartyrLayout extends TabLayout {
 		if (root == null) return;
 		LinkedListQueue<TNode<Martyr>> queue = new LinkedListQueue<>();
 		queue.enqueue(root);
+		while (!queue.isEmpty()) {
+			
+		}
 	}
 
 	@Override
