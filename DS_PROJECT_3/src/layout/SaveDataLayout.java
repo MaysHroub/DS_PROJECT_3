@@ -3,8 +3,6 @@ package layout;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
-
-import data.District;
 import data.MDate;
 import data.Martyr;
 import dataholder.DataHolder;
@@ -14,7 +12,6 @@ import hash.QuadraticOHash;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
