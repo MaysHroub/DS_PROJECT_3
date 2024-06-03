@@ -94,6 +94,7 @@ public class NavigateDateLayout extends TabLayout {
 	private void fillLayoutWithData() {
 		DataHolder dataHolder = getDataHolder();
 		if (dataHolder.getCurrentDate() == null) {
+			currentDateL.setText("");
 			totalL.setText("");
 			totalMalesL.setText("");
 			totalFemalesL.setText("");
@@ -105,6 +106,7 @@ public class NavigateDateLayout extends TabLayout {
 			return;
 		}
 		MDateStat stat = dataHolder.getCurrentDate().getStat();
+		currentDateL.setText(dataHolder.getCurrentDate().toString());
 		totalL.setText(stat.getTotalMartyrs() + "");
 		totalMalesL.setText(stat.getTotalMales() + "");
 		totalFemalesL.setText(stat.getTotalFemales() + "");
