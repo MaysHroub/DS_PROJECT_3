@@ -159,7 +159,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		while (!queue.isEmpty()) {
 			TNode<Martyr> curr = queue.dequeue();
 			martyrs.add(curr.getData());
-			
+			if (curr.hasRight()) queue.enqueue(curr.getRight());
+			if (curr.hasLeft()) queue.enqueue(curr.getLeft());
 		}
 	}
 
