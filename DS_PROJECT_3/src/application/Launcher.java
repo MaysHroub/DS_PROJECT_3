@@ -10,6 +10,7 @@ import data.District;
 import data.MDate;
 import data.MDateStat;
 import data.Martyr;
+import data_structs.tree.BinarySearchTree;
 import dataholder.DataHolder;
 import doublylinkedlist.DNode;
 import doublylinkedlist.DoublyLinkedList;
@@ -34,6 +35,10 @@ public class Launcher extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private void initPorgram(Stage stage) {
+		
 	}
 	
 	private void loadData(Stage stage, DataHolder dataHolder) {
