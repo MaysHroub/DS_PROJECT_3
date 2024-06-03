@@ -36,7 +36,7 @@ public class Launcher extends Application {
 		}
 	}
 	
-	QuadraticOHash<MDate> loadData(Stage stage, DataHolder dataHolder) {
+	private void loadData(Stage stage, DataHolder dataHolder) {
 		QuadraticOHash<MDate> hashTable = new QuadraticOHash<>(11);
 		DoublyLinkedList<District> districts = new DoublyLinkedList<>();
 		FileChooser fileChooser = new FileChooser();
@@ -80,7 +80,6 @@ public class Launcher extends Application {
 				
 				if (district.getLocations().find(tokens[3]) == null)
 					district.getLocations().insertSorted(tokens[3]);
-				
 			}
 			
 		} catch (FileNotFoundException e) {
