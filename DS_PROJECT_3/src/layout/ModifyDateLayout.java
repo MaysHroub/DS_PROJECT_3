@@ -93,9 +93,6 @@ public class ModifyDateLayout extends TabLayout {
 		layout.setLeft(leftBox);
 		layout.setRight(rightBox);
 		
-		BorderPane.setAlignment(leftBox, Pos.CENTER);
-		BorderPane.setAlignment(rightBox, Pos.CENTER);
-		
 		return layout;
 	}
 	
