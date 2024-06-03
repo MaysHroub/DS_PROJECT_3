@@ -27,7 +27,9 @@ import scenes.SaveScene;
 import scenes.SceneID;
 import scenes.SceneManager;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 
 
 public class Launcher extends Application {
@@ -37,15 +39,18 @@ public class Launcher extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+		Button loadBtn = new Button("Load data");
+
+		loadBtn.setStyle("-fx-font-size: 13;" + "	-fx-font-weight: bold;" + "	-fx-font-family: 'Cambria';"
+				+ "	-fx-background-color: #fca503;" + "	-fx-text-fill: white;");
+		loadBtn.setOnAction(e -> {
+			DataHolder dataHolder = new DataHolder();
+			loadData(primaryStage, dataHolder);
+			initPorgram(primaryStage, dataHolder);
+		});
+
+		primaryStage.setScene(new Scene(new StackPane(loadBtn), WIDTH, HEIGHT));
+		primaryStage.show();
 	}
 	
 	private void initPorgram(Stage stage, DataHolder dataHolder) {
