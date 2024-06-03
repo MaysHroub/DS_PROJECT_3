@@ -5,10 +5,13 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Date;
 import java.util.Scanner;
+
+import data.District;
 import data.MDate;
 import data.MDateStat;
 import data.Martyr;
 import dataholder.DataHolder;
+import doublylinkedlist.DoublyLinkedList;
 import hash.HNode;
 import hash.QuadraticOHash;
 import javafx.application.Application;
@@ -34,6 +37,7 @@ public class Launcher extends Application {
 	
 	QuadraticOHash<MDate> loadData(Stage stage, DataHolder dataHolder) {
 		QuadraticOHash<MDate> hashTable = new QuadraticOHash<>(11);
+		DoublyLinkedList<District> districts = new DoublyLinkedList<>();
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Select a file");
 		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("csv files", "*.csv"));
