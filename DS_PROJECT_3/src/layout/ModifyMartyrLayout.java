@@ -87,6 +87,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			heightTF.setText(getDataHolder().getCurrentDate().getMartyrs().height() + "");
 		});
 		sortTableBtn = new Button("Sort by age");
+		sortTableBtn.setOnAction(e -> sortTableByAge());
 		displayTableBtn = new Button("Level order");
 		
 		maleRB = new RadioButton("Male");
