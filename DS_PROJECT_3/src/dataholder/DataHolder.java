@@ -21,6 +21,7 @@ public class DataHolder {
 	
 	public DataHolder(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
+		updateDatesStat();
 		moveDown();
 	}
 	
@@ -30,7 +31,7 @@ public class DataHolder {
 	
 	public void setDates(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
-		
+		updateDatesStat();
 		moveDown();
 	}
 	
