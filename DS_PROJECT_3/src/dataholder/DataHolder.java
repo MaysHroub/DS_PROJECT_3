@@ -35,7 +35,12 @@ public class DataHolder {
 	}
 	
 	private void updateDatesStat() {
-		
+		int m = dates.getTableSize();
+		for (int i = 0; i < m; i++) {
+			HNode<MDate> date = dates.get(i);
+			if (date.getFlag() == Flag.FULL)
+				date.getData().getStat().updateStats();
+		}
 	}
 
 	public void moveUp() {
