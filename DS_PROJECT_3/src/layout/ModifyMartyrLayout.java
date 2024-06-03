@@ -199,7 +199,6 @@ public class ModifyMartyrLayout extends TabLayout {
 			if (curr.hasRight()) queue.enqueue(curr.getRight());
 			if (curr.hasLeft()) queue.enqueue(curr.getLeft());
 		}
-		martyrsTable.setItems(martyrs);
 		martyrsTable.refresh();
 	}
 	
@@ -208,7 +207,6 @@ public class ModifyMartyrLayout extends TabLayout {
 		martyrs.toArray(arr);
 		Martyr.heapSortAsc(arr);
 		martyrs = FXCollections.observableArrayList(arr);
-		martyrsTable.setItems(martyrs);
 		martyrsTable.refresh();
 	}
 
