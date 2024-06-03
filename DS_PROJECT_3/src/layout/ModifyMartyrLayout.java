@@ -24,6 +24,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import linkedlist.Node;
+import tree.TNode;
 
 public class ModifyMartyrLayout extends TabLayout {
 	
@@ -145,7 +146,8 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableLevelOrder() {
-		
+		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
+		if (root == null) return;
 	}
 
 	@Override
