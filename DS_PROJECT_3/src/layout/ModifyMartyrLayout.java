@@ -143,6 +143,10 @@ public class ModifyMartyrLayout extends TabLayout {
 				new Martyr(name, district, location, gender, age));
 		statusL.setText("Martyr " + name + " is inserted :)");
 	}
+	
+	private void fillTableLevelOrder() {
+		
+	}
 
 	@Override
 	public void updateContent() {
