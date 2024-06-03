@@ -31,7 +31,7 @@ public class SaveScene extends TabScene {
 
 		MenuItem dateItem = new MenuItem("Date screen");
 		dateItem.setOnAction(e -> {
-			getManager().switchTo(SceneID.DISTRICT);
+			getManager().switchTo(SceneID.MARTYR_DATE);
 		});
 		Menu menu = new Menu("Go to");
 		menu.getItems().addAll(dateItem);
