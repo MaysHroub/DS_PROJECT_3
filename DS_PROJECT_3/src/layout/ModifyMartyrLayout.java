@@ -167,7 +167,8 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void sortTableByAge() {
-		
+		Martyr[] arr = new Martyr[martyrs.size()];
+		martyrs.toArray(arr);
 	}
 
 	@Override
