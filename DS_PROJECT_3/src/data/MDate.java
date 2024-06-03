@@ -43,6 +43,12 @@ public class MDate implements Comparable<MDate> {
 	public int compareTo(MDate o) {
 		return date.compareTo(o.date);
 	}
+	
+	@Override
+	public String toString() {
+		// yyyy/mm/dd
+		return String.format("%4d/%2d/%2d", date.getYear()+1900, date.getMonth()+1, date.getDate());
+	}
 
 
 }
