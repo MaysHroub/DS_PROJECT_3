@@ -1,6 +1,9 @@
 package application;
 	
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 import data.MDate;
 import hash.QuadraticOHash;
@@ -34,6 +37,11 @@ public class Launcher extends Application {
 		File selectedFile = fileChooser.showOpenDialog(stage);
 		if (selectedFile == null)
 			return null;
+		try (Scanner in = new Scanner(new FileInputStream(selectedFile))) {
+			
+		} catch (FileNotFoundException e) {
+			System.out.println(e);
+		}
 		return null;
 	}
 	
