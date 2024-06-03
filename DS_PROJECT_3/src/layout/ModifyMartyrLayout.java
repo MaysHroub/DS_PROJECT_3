@@ -150,6 +150,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
 		if (root == null) return;
 		LinkedListQueue<TNode<Martyr>> queue = new LinkedListQueue<>();
+		queue.enqueue(root);
 	}
 
 	@Override
