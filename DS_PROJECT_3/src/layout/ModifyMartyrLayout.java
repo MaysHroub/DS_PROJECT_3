@@ -188,6 +188,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableLevelOrder() {
+		martyrs.clear();
 		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
 		if (root == null) return;
 		LinkedListQueue<TNode<Martyr>> queue = new LinkedListQueue<>();
