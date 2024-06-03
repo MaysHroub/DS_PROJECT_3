@@ -162,6 +162,8 @@ public class ModifyMartyrLayout extends TabLayout {
 			if (curr.hasRight()) queue.enqueue(curr.getRight());
 			if (curr.hasLeft()) queue.enqueue(curr.getLeft());
 		}
+		martyrsTable.setItems(martyrs);
+		martyrsTable.refresh();
 	}
 
 	@Override
