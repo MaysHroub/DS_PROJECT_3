@@ -2,16 +2,23 @@ package layout;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
+
 import data.District;
+import data.MDate;
 import data.Martyr;
 import dataholder.DataHolder;
+import hash.Flag;
+import hash.QuadraticOHash;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import tree.TNode;
 
 public class SaveDataLayout extends TabLayout {
 	
@@ -57,23 +64,21 @@ public class SaveDataLayout extends TabLayout {
 	}
 	
 	@SuppressWarnings("deprecation")
-	private void writeMartyrs(TNode<MartyrDate> curr, District dis, Location loc, PrintWriter out) {
+	private void writeMartyrs(TNode<Martyr> curr, Date date, PrintWriter out) {
 		if (curr == null) return;
 		// 0.name, 1.event, 2.age, 3.location, 4.district, 5.gender
-		Node<Martyr> currMartyr = curr.getData().getMartyrs().getHead();
-		while (currMartyr != null) {
-			out.println(String.format("%s,%s,%d,%s,%s,%c",
-					currMartyr.getData().getName(),
-					(curr.getData().getDate().getMonth() + 1) + "/" + 
-					(curr.getData().getDate().getDate()) + "/" + 
-					(curr.getData().getDate().getYear() + 1900),
-					currMartyr.getData().getAge(),
-					loc, dis,
-					currMartyr.getData().getGender()));
-			currMartyr = currMartyr.getNext();
-		}
-		writeMartyrs(curr.getLeft(), dis, loc, out);
-		writeMartyrs(curr.getRight(), dis, loc, out);
+		Martyr m = curr.getData();
+		out.println(String.format("%s,%s,%d,%s,%s,%c",
+				m.getName(),
+				(date.getMonth() + 1) + "/" + 
+				(date.getDate()) + "/" + 
+				(date.getYear() + 1900),
+				m.getAge(),
+				m.getLocation(),
+				m.getDistrict(),
+				m.getGender()));
+		writeMartyrs(curr.getLeft(), date, out);
+		writeMartyrs(curr.getRight(), date, out);
 	}
 
 	@Override
