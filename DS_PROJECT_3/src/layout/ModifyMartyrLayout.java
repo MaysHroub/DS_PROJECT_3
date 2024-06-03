@@ -157,6 +157,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		LinkedListQueue<TNode<Martyr>> queue = new LinkedListQueue<>();
 		queue.enqueue(root);
 		while (!queue.isEmpty()) {
+			TNode<Martyr> curr = queue.dequeue();
+			martyrs.add(curr.getData());
 			
 		}
 	}
