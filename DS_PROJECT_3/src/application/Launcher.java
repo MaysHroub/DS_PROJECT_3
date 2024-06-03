@@ -8,6 +8,7 @@ import java.util.Scanner;
 import data.MDate;
 import data.MDateStat;
 import data.Martyr;
+import dataholder.DataHolder;
 import hash.HNode;
 import hash.QuadraticOHash;
 import javafx.application.Application;
@@ -31,7 +32,7 @@ public class Launcher extends Application {
 		}
 	}
 	
-	QuadraticOHash<MDate> loadData(Stage stage) {
+	QuadraticOHash<MDate> loadData(Stage stage, DataHolder dataHolder) {
 		QuadraticOHash<MDate> hashTable = new QuadraticOHash<>(11);
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Select a file");
