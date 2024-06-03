@@ -75,7 +75,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		statusL = currentDateL = new Label();
 		
 		Label l1 = new Label("Enter martyr's name:"),
-				l2 = new Label("Enter martyr's age@:"),
+				l2 = new Label("Enter martyr's age:"),
 				l3 = new Label("Select gender:"),
 				l4 = new Label("Select District and Location:"),
 				l5 = new Label("Size:"),
