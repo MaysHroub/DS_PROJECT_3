@@ -17,6 +17,10 @@ import hash.QuadraticOHash;
 import javafx.application.Application;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import layout.ModifyDateLayout;
+import layout.ModifyMartyrLayout;
+import layout.NavigateDateLayout;
+import layout.SaveDataLayout;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
@@ -36,7 +40,10 @@ public class Launcher extends Application {
 	}
 	
 	private void initPorgram(Stage stage, DataHolder dataHolder) {
-		
+		ModifyDateLayout modifyDateLayout = new ModifyDateLayout(dataHolder);
+		ModifyMartyrLayout modifyMartyrLayout = new ModifyMartyrLayout(dataHolder);
+		NavigateDateLayout navigateDateLayout = new NavigateDateLayout(dataHolder);
+		SaveDataLayout saveDataLayout = new SaveDataLayout(dataHolder);
 	}
 	
 	private void loadData(Stage stage, DataHolder dataHolder) {
