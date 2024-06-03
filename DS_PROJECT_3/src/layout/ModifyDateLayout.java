@@ -74,7 +74,7 @@ public class ModifyDateLayout extends TabLayout {
 		upGrid.add(pickNewL, 0, 0);
 		upGrid.add(datePicker, 1, 0);
 		upGrid.add(selectL, 0, 1);
-		upGrid.add(datesCB, 0, 1);
+		upGrid.add(datesCB, 1, 1);
 		
 		GridPane downGrid = new GridPane(10, 10);
 		downGrid.add(insertBtn, 0, 0);
