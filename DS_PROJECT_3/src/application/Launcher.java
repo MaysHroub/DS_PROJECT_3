@@ -77,7 +77,10 @@ public class Launcher extends Application {
 					district = districtNode.getData();
 				else 
 					districts.insert(district);
-					
+				
+				if (district.getLocations().find(tokens[3]) == null)
+					district.getLocations().insertSorted(tokens[3]);
+				
 			}
 			
 		} catch (FileNotFoundException e) {
