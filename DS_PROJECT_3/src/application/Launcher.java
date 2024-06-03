@@ -31,6 +31,9 @@ public class Launcher extends Application {
 		fileChooser.setTitle("Select a file");
 		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("csv files", "*.csv"));
 		fileChooser.setInitialDirectory(new File("/C:/Users/ismae/Downloads"));
+		File selectedFile = fileChooser.showOpenDialog(stage);
+		if (selectedFile == null)
+			return null;
 		return null;
 	}
 	
