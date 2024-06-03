@@ -85,6 +85,8 @@ public class Launcher extends Application {
 		} catch (FileNotFoundException e) {
 			System.out.println(e);
 		}
+		dataHolder.setDates(hashTable);
+		dataHolder.setDistricts(districts);
 	}
 	
 	public static void main(String[] args) {
