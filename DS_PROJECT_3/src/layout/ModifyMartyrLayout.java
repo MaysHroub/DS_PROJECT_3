@@ -60,7 +60,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			getDataHolder().getCurrentDate().getMartyrs().delete(m);
 			m.setName(t.getNewValue());
 			getDataHolder().getCurrentDate().getMartyrs().insert(m);
-			fillTableLevelOrder();
+			fillTableInOrder();
 		});
 		ageColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getAge()).asObject());
 		genderColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getGender() + ""));
