@@ -70,6 +70,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		martyrsTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 		
 		martyrs = FXCollections.observableArrayList();
+		martyrsTable.setItems(martyrs);
 		
 		statusL = currentDateL = new Label();
 		
