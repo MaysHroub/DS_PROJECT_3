@@ -52,19 +52,7 @@ public class SaveDataLayout extends TabLayout {
 		}
 	}
 	
-	private void writeDists(TNode<District> curr, PrintWriter out) {
-		if (curr == null) return;
-		writeLocs(curr.getData().getLocations().getRoot(), curr.getData(), out);
-		writeDists(curr.getLeft(), out);
-		writeDists(curr.getRight(), out);
-	}
 	
-	private void writeLocs(TNode<Location> curr, District dis, PrintWriter out) {
-		if (curr == null) return;
-		writeMartyrs(curr.getData().getMaryrDates().getRoot(), dis, curr.getData(), out);
-		writeLocs(curr.getLeft(), dis, out);
-		writeLocs(curr.getRight(), dis, out);
-	}
 	
 	@SuppressWarnings("deprecation")
 	private void writeMartyrs(TNode<MartyrDate> curr, District dis, Location loc, PrintWriter out) {
