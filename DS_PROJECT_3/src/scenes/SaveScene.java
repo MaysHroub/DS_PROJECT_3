@@ -29,12 +29,12 @@ public class SaveScene extends TabScene {
 		}
 		tabPane.setSide(Side.BOTTOM);
 
-		MenuItem distItem = new MenuItem("Date screen");
-		distItem.setOnAction(e -> {
+		MenuItem dateItem = new MenuItem("Date screen");
+		dateItem.setOnAction(e -> {
 			getManager().switchTo(SceneID.DISTRICT);
 		});
 		Menu menu = new Menu("Go to");
-		menu.getItems().addAll(distItem);
+		menu.getItems().addAll(dateItem);
 		MenuBar menuBar = new MenuBar(menu);
 		
 		BorderPane bp = new BorderPane();
