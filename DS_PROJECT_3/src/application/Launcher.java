@@ -1,5 +1,7 @@
 package application;
 	
+import data.MDate;
+import hash.QuadraticOHash;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -18,6 +20,11 @@ public class Launcher extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	QuadraticOHash<MDate> loadData(Stage stage) {
+		
+		return null;
 	}
 	
 	public static void main(String[] args) {
