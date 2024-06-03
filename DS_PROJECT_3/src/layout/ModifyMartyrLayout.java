@@ -177,6 +177,7 @@ public class ModifyMartyrLayout extends TabLayout {
 				location = locationsCB.getValue();
 		getDataHolder().getCurrentDate().getMartyrs().insert(
 				new Martyr(name, district, location, gender, age));
+		getDataHolder().getCurrentDate().getStat().updateStats();
 		statusL.setText("Martyr " + name + " is inserted :)");
 	}
 	
@@ -191,6 +192,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			getDataHolder().getCurrentDate().getMartyrs().delete(selectedMartyr);
 			martyrs.remove(selectedMartyr);
 			martyrsTable.refresh();
+			getDataHolder().getCurrentDate().getStat().updateStats();
 			statusL.setText("Martyr " + selectedMartyr.getName() + " is deleted");
 		}
 	}
