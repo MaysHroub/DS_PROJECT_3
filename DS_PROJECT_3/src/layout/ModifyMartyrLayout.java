@@ -12,6 +12,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -20,6 +21,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -40,6 +42,8 @@ public class ModifyMartyrLayout extends TabLayout {
 	private ComboBox<String> locationsCB;
 	private TableView<Martyr> martyrsTable;
 	private ObservableList<Martyr> martyrs;
+	
+	private Alert alert;
 	
 	
 	public ModifyMartyrLayout(DataHolder dataHolder) {
@@ -71,6 +75,11 @@ public class ModifyMartyrLayout extends TabLayout {
 		
 		martyrs = FXCollections.observableArrayList();
 		martyrsTable.setItems(martyrs);
+		
+		alert = new Alert(AlertType.CONFIRMATION);
+		alert.setTitle("Confirmation required");
+		alert.setHeaderText("Are you sure you want to proceed?");
+		alert.setContentText("This action cannot be undone :)");
 		
 		statusL = currentDateL = new Label();
 		
