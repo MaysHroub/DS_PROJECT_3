@@ -151,6 +151,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		statusL.setText("Martyr " + name + " is inserted :)");
 	}
 	
+	private void deleteMartyr() {
+		
+	}
+	
 	private void fillTableLevelOrder() {
 		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
 		if (root == null) return;
