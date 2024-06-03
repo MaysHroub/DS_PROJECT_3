@@ -89,6 +89,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		sortTableBtn = new Button("Sort by age");
 		sortTableBtn.setOnAction(e -> sortTableByAge());
 		displayTableBtn = new Button("Level order");
+		displayTableBtn.setOnAction(e -> fillTableLevelOrder());
 		
 		maleRB = new RadioButton("Male");
 		femaleRB = new RadioButton("Female");
