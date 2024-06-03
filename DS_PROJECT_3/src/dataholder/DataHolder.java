@@ -22,7 +22,8 @@ public class DataHolder {
 	public DataHolder(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
 		updateDatesStat();
-		moveDown();
+		if (dates.get(0).getFlag() == Flag.FULL) currentDate = dates.get(0).getData();
+		else moveDown();
 	}
 	
 	public QuadraticOHash<MDate> getDates() {
@@ -32,7 +33,8 @@ public class DataHolder {
 	public void setDates(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
 		updateDatesStat();
-		moveDown();
+		if (dates.get(0).getFlag() == Flag.FULL) currentDate = dates.get(0).getData();
+		else moveDown();
 	}
 	
 	private void updateDatesStat() {
