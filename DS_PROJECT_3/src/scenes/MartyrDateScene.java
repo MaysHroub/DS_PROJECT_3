@@ -29,21 +29,13 @@ public class MartyrDateScene extends TabScene {
 		}
 		tabPane.setSide(Side.BOTTOM);
 
-		MenuItem distItem = new MenuItem("Districts screen");
-		MenuItem locItem = new MenuItem("Locations screen");
 		MenuItem martyrItem = new MenuItem("Martyr screen");
 		
-		distItem.setOnAction(e -> {
-			getManager().switchTo(SceneID.DISTRICT);
-		});
-		locItem.setOnAction(e -> {
-			getManager().switchTo(SceneID.LOCATION);
-		});
 		martyrItem.setOnAction(e -> {
 			getManager().switchTo(SceneID.MARTYR);
 		});
 		Menu menu = new Menu("Go to");
-		menu.getItems().addAll(distItem, locItem, martyrItem);
+		menu.getItems().addAll(martyrItem);
 		MenuBar menuBar = new MenuBar(menu);
 		
 		BorderPane bp = new BorderPane();
