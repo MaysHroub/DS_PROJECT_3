@@ -78,16 +78,20 @@ public class ModifyDateLayout extends TabLayout {
 		upGrid.add(datePicker, 1, 0);
 		upGrid.add(selectL, 0, 1);
 		upGrid.add(datesCB, 1, 1);
+		upGrid.setAlignment(Pos.CENTER);
 		
 		GridPane downGrid = new GridPane(10, 10);
 		downGrid.add(insertBtn, 0, 0);
 		downGrid.add(updateBtn, 1, 0);
 		downGrid.add(deleteBtn, 2, 0);
 		downGrid.add(statusL, 1, 1);
+		downGrid.setAlignment(Pos.CENTER);
 		
 		VBox rightBox = new VBox(15, datesTable, printBtn);
+		rightBox.setAlignment(Pos.CENTER);
 		
 		VBox leftBox = new VBox(20, upGrid, downGrid);
+		leftBox.setAlignment(Pos.CENTER);
 		
 		BorderPane layout = new BorderPane();
 		layout.setLeft(leftBox);
