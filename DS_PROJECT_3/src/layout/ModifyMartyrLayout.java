@@ -186,6 +186,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			getDataHolder().getCurrentDate().getMartyrs().delete(selectedMartyr);
 			martyrs.remove(selectedMartyr);
 			martyrsTable.refresh();
+			statusL.setText("Martyr " + selectedMartyr.getName() + " is deleted");
 		}
 	}
 	
