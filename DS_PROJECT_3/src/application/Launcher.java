@@ -31,7 +31,7 @@ public class Launcher extends Application {
 	}
 	
 	QuadraticOHash<MDate> loadData(Stage stage) {
-		QuadraticOHash<MDate> hash = new QuadraticOHash<>(11);
+		QuadraticOHash<MDate> hashTable = new QuadraticOHash<>(11);
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setTitle("Select a file");
 		fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("csv files", "*.csv"));
@@ -51,11 +51,11 @@ public class Launcher extends Application {
 				Date date = new Date(Integer.parseInt(dateInfo[2]) - 1900, Integer.parseInt(dateInfo[0]) - 1,
 						Integer.parseInt(dateInfo[1]));
 				MDate martyrDate = new MDate(date);
-				HNode<MDate> hashedDate = hash.find(martyrDate);
+				HNode<MDate> hashedDate = hashTable.find(martyrDate);
 				if (hashedDate != null)
 					martyrDate = hashedDate.getData();
 				else {
-					hash.add(martyrDate);
+					hashTable.add(martyrDate);
 					MDateStat stat = new MDateStat(martyrDate);
 					martyrDate.setStat(stat);
 				}
