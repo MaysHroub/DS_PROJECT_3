@@ -11,6 +11,7 @@ import data.MDate;
 import data.MDateStat;
 import data.Martyr;
 import dataholder.DataHolder;
+import doublylinkedlist.DNode;
 import doublylinkedlist.DoublyLinkedList;
 import hash.HNode;
 import hash.QuadraticOHash;
@@ -68,8 +69,15 @@ public class Launcher extends Application {
 				
 				Martyr martyr = new Martyr(tokens[0], tokens[4], tokens[3],
 						tokens[5].charAt(0), Integer.valueOf(tokens[2]));
-				
 				martyrDate.getMartyrs().insert(martyr);
+				
+				District district = new District(tokens[4]);
+				DNode<District> districtNode = districts.find(district);
+				if (districtNode != null) 
+					district = districtNode.getData();
+				else 
+					districts.insert(district);
+					
 			}
 			
 		} catch (FileNotFoundException e) {
