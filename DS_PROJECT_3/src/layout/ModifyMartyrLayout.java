@@ -230,8 +230,8 @@ public class ModifyMartyrLayout extends TabLayout {
 
 	@Override
 	public void updateContent() {
-		// TODO Auto-generated method stub
-
+		fillTableInOrder();
+		fillDistrictsCB();
 	}
 	
 	private void fillDistrictsCB() {
