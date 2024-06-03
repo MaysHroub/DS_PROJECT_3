@@ -158,6 +158,8 @@ public class ModifyMartyrLayout extends TabLayout {
 			return;
 		}
 		getDataHolder().getCurrentDate().getMartyrs().delete(selectedMartyr);
+		martyrs.remove(selectedMartyr);
+		martyrsTable.refresh();
 	}
 	
 	private void fillTableLevelOrder() {
