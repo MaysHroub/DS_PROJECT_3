@@ -29,7 +29,7 @@ public class SaveScene extends TabScene {
 		}
 		tabPane.setSide(Side.BOTTOM);
 
-		MenuItem distItem = new MenuItem("Districts screen");
+		MenuItem distItem = new MenuItem("Date screen");
 		distItem.setOnAction(e -> {
 			getManager().switchTo(SceneID.DISTRICT);
 		});
