@@ -35,7 +35,7 @@ public class Launcher extends Application {
 		}
 	}
 	
-	private void initPorgram(Stage stage) {
+	private void initPorgram(Stage stage, DataHolder dataHolder) {
 		
 	}
 	
