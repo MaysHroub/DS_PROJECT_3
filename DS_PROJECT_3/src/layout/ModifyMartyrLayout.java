@@ -20,6 +20,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.TableColumn.CellEditEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -54,6 +55,13 @@ public class ModifyMartyrLayout extends TabLayout {
 		TableColumn<Martyr, String> districtColumn = new TableColumn<>("District");
 		TableColumn<Martyr, String> locationColumn = new TableColumn<>("Location");
 		nameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getName()));
+		nameColumn.setOnEditCommit((CellEditEvent<Martyr, String> t) -> {
+			Martyr m = ((Martyr) t.getTableView().getItems().get(t.getTablePosition().getRow()));
+			getDataHolder().getCurrentDate().getMartyrs().delete(m);
+			m.setName(t.getNewValue());
+			getDataHolder().getCurrentDate().getMartyrs().insert(m);
+			martyrsTable.refresh();
+		});
 		ageColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getAge()).asObject());
 		genderColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getGender() + ""));
 		districtColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getDistrict()));
