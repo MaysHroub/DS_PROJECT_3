@@ -2,8 +2,10 @@ package dataholder;
 
 import data.District;
 import data.MDate;
+import data.Martyr;
 import doublylinkedlist.DoublyLinkedList;
 import hash.Flag;
+import hash.HNode;
 import hash.QuadraticOHash;
 
 public class DataHolder {
@@ -28,7 +30,12 @@ public class DataHolder {
 	
 	public void setDates(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
+		
 		moveDown();
+	}
+	
+	private void updateDatesStat() {
+		
 	}
 
 	public void moveUp() {
