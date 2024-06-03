@@ -23,7 +23,7 @@ public class Launcher extends Application {
 	}
 	
 	QuadraticOHash<MDate> loadData(Stage stage) {
-		
+		QuadraticOHash<MDate> hash = new QuadraticOHash<>(11);
 		return null;
 	}
 	
