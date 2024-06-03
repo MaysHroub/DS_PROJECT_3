@@ -45,7 +45,7 @@ public class Launcher extends Application {
 		fileChooser.setInitialDirectory(new File("/C:/Users/ismae/Downloads"));
 		File selectedFile = fileChooser.showOpenDialog(stage);
 		if (selectedFile == null)
-			return null;
+			return;
 		try (Scanner in = new Scanner(new FileInputStream(selectedFile))) {
 			in.nextLine(); // 0.name, 1.event, 2.age, 3.location, 4.district, 5.gender
 			while (in.hasNext()) {
@@ -85,7 +85,6 @@ public class Launcher extends Application {
 		} catch (FileNotFoundException e) {
 			System.out.println(e);
 		}
-		return null;
 	}
 	
 	public static void main(String[] args) {
