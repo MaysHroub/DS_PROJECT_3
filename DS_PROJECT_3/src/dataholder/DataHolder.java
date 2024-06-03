@@ -15,6 +15,8 @@ public class DataHolder {
 	private DoublyLinkedList<District> districts;
 
 	
+	public DataHolder() { }
+	
 	public DataHolder(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
 		moveDown();
