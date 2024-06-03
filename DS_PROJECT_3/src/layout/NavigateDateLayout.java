@@ -44,7 +44,7 @@ public class NavigateDateLayout extends TabLayout {
 		maxMartyrLocationL = new Label();
 		currentDateL = new Label();
 		
-		upBtn = new Button("UP ↑");
+		upBtn = new Button("  UP ↑  ");
 		upBtn.setOnAction(e -> moveUp());
 		downBtn = new Button("DOWN ↓");
 		downBtn.setOnAction(e -> moveDown());
@@ -75,8 +75,6 @@ public class NavigateDateLayout extends TabLayout {
 		layout.setBottom(vBox);
 		
 		BorderPane.setAlignment(currentDateL, Pos.CENTER);
-		BorderPane.setAlignment(gp, Pos.CENTER);
-		BorderPane.setAlignment(vBox, Pos.CENTER);
 		
 		return layout;
 	}
