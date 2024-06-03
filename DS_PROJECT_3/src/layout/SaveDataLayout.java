@@ -52,7 +52,7 @@ public class SaveDataLayout extends TabLayout {
 		if (fileTF.getText() == null || fileTF.getText().length() == 0) return;
 		
 		try (PrintWriter out = new PrintWriter(fileTF.getText())) {
-			writeDists(getDataHolder().getDistricts().getRoot(), out);
+			writeDates(out);
 			saveL.setText("All data is saved");
 		} catch (IOException e) {
 			System.out.println(e);
