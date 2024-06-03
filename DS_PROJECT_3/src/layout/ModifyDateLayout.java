@@ -62,6 +62,8 @@ public class ModifyDateLayout extends TabLayout {
 		alert.setHeaderText("Are you sure you want to proceed?");
 		alert.setContentText("This action cannot be undone :)");
 		
+		datePicker = new DatePicker();
+		
 		datesTable = new TableView<>();
 		TableColumn<HNode<MDate>, String> dateColumn = new TableColumn<>("Date");
 		TableColumn<HNode<MDate>, String> flagColumn = new TableColumn<>("Flag");
