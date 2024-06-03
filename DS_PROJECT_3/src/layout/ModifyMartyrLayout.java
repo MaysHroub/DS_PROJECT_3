@@ -1,14 +1,11 @@
 package layout;
 
 import java.util.Optional;
-
 import data.District;
-import data.MDate;
 import data.Martyr;
 import dataholder.DataHolder;
 import doublylinkedlist.DNode;
 import doublylinkedlist.DoublyLinkedList;
-import hash.HNode;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
