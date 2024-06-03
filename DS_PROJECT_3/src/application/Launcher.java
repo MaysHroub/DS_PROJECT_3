@@ -5,12 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Date;
 import java.util.Scanner;
-
 import data.District;
 import data.MDate;
 import data.MDateStat;
 import data.Martyr;
-import data_structs.tree.BinarySearchTree;
 import dataholder.DataHolder;
 import doublylinkedlist.DNode;
 import doublylinkedlist.DoublyLinkedList;
