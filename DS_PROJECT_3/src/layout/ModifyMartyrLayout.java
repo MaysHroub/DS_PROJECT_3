@@ -157,6 +157,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			statusL.setText("No martyr is selected");
 			return;
 		}
+		getDataHolder().getCurrentDate().getMartyrs().delete(selectedMartyr);
 	}
 	
 	private void fillTableLevelOrder() {
