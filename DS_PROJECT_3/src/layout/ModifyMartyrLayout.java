@@ -9,6 +9,7 @@ import doublylinkedlist.DoublyLinkedList;
 import hash.HNode;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -36,6 +37,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	private ComboBox<District> districtsCB;
 	private ComboBox<String> locationsCB;
 	private TableView<Martyr> martyrsTable;
+	private ObservableList<Martyr> martyrs;
 	
 	
 	public ModifyMartyrLayout(DataHolder dataHolder) {
