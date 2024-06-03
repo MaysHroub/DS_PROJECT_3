@@ -52,7 +52,9 @@ public class SaveDataLayout extends TabLayout {
 		}
 	}
 	
-	
+	private void writeDates() {
+		
+	}
 	
 	@SuppressWarnings("deprecation")
 	private void writeMartyrs(TNode<MartyrDate> curr, District dis, Location loc, PrintWriter out) {
