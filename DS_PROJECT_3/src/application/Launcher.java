@@ -22,6 +22,8 @@ import layout.ModifyMartyrLayout;
 import layout.NavigateDateLayout;
 import layout.SaveDataLayout;
 import scenes.MartyrDateScene;
+import scenes.MartyrScene;
+import scenes.SaveScene;
 import scenes.SceneManager;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -53,7 +55,11 @@ public class Launcher extends Application {
 		
 		SceneManager manager = new SceneManager(stage);
 		
+		MartyrDateScene martyrDateScene = new MartyrDateScene(manager, WIDTH, HEIGHT, modifyDateLayout, navigateDateLayout);
+		MartyrScene martyrScene = new MartyrScene(manager, WIDTH, HEIGHT, modifyMartyrLayout);
+		SaveScene saveScene = new SaveScene(manager, WIDTH, HEIGHT, saveDataLayout);
 		
+		manager.setScenes(martyrDateScene, martyrScene, saveScene);
 	}
 	
 	private void loadData(Stage stage, DataHolder dataHolder) {
