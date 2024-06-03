@@ -28,6 +28,7 @@ public class DataHolder {
 	
 	public void setDates(QuadraticOHash<MDate> dates) {
 		this.dates = dates;
+		moveDown();
 	}
 
 	public void moveUp() {
