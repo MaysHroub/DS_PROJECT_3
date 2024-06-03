@@ -53,6 +53,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		super("Modify Martyrs", dataHolder);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	protected Pane createLayout() {
 		martyrsTable = new TableView<>();
