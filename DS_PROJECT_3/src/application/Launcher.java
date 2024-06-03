@@ -3,9 +3,11 @@ package application;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Date;
 import java.util.Scanner;
-
 import data.MDate;
+import data.MDateStat;
+import hash.HNode;
 import hash.QuadraticOHash;
 import javafx.application.Application;
 import javafx.stage.FileChooser;
@@ -43,6 +45,21 @@ public class Launcher extends Application {
 				String[] tokens = in.nextLine().split(",");
 				if (tokens[2].length() == 0)  // no age
 					continue;
+				
+				String[] dateInfo = tokens[1].split("/");
+				@SuppressWarnings("deprecation")
+				Date date = new Date(Integer.parseInt(dateInfo[2]) - 1900, Integer.parseInt(dateInfo[0]) - 1,
+						Integer.parseInt(dateInfo[1]));
+				MDate martyrDate = new MDate(date);
+				HNode<MDate> hashedDate = hash.find(martyrDate);
+				if (hashedDate != null)
+					martyrDate = hashedDate.getData();
+				else {
+					hash.add(martyrDate);
+					MDateStat stat = new MDateStat(martyrDate);
+					martyrDate.setStat(stat);
+				}
+				
 			}
 			
 		} catch (FileNotFoundException e) {
