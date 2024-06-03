@@ -174,7 +174,8 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableInOrder() {
-		
+		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
+		if (root == null) return;
 	}
 	
 	private void fillTableLevelOrder() {
