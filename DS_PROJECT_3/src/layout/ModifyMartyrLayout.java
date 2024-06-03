@@ -165,6 +165,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		martyrsTable.setItems(martyrs);
 		martyrsTable.refresh();
 	}
+	
+	private void sortTableByAge() {
+		
+	}
 
 	@Override
 	public void updateContent() {
