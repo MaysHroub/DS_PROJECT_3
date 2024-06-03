@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 import data.MDate;
 import data.MDateStat;
+import data.Martyr;
 import hash.HNode;
 import hash.QuadraticOHash;
 import javafx.application.Application;
@@ -60,6 +61,10 @@ public class Launcher extends Application {
 					martyrDate.setStat(stat);
 				}
 				
+				Martyr martyr = new Martyr(tokens[0], tokens[4], tokens[3],
+						tokens[5].charAt(0), Integer.valueOf(tokens[2]));
+				
+				martyrDate.getMartyrs().insert(martyr);
 			}
 			
 		} catch (FileNotFoundException e) {
