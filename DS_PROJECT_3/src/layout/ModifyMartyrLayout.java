@@ -152,7 +152,11 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void deleteMartyr() {
-		
+		Martyr selectedMartyr = martyrsTable.getSelectionModel().getSelectedItem();
+		if (selectedMartyr == null) {
+			statusL.setText("No martyr is selected");
+			return;
+		}
 	}
 	
 	private void fillTableLevelOrder() {
