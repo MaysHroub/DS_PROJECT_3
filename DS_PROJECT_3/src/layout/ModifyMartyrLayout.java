@@ -9,6 +9,7 @@ import doublylinkedlist.DoublyLinkedList;
 import hash.HNode;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -59,6 +60,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		locationColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getLocation()));
 		martyrsTable.getColumns().addAll(nameColumn, ageColumn, genderColumn, districtColumn, locationColumn);
 		martyrsTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+		
+		martyrs = FXCollections.observableArrayList();
 		
 		statusL = currentDateL = new Label();
 		
