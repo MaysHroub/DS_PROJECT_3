@@ -66,8 +66,10 @@ public class NavigateDateLayout extends TabLayout {
 		gp.add(maxMartyrDistrictL, 1, 6);
 		gp.add(l8, 0, 7);
 		gp.add(maxMartyrLocationL, 1, 7);
+		gp.setAlignment(Pos.CENTER);
 		
 		VBox vBox = new VBox(10, upBtn, downBtn);
+		vBox.setAlignment(Pos.CENTER);
 		
 		BorderPane layout = new BorderPane();
 		layout.setTop(currentDateL);
