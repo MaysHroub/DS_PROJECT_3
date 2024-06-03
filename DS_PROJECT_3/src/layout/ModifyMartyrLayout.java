@@ -128,7 +128,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		});
 		locationsCB = new ComboBox<>();
 		
-		GridPane gp = new GridPane(10, 10);
+		GridPane gp = new GridPane(15, 20);
 		gp.add(l1, 0, 0);
 		gp.add(nameTF, 1, 0);
 		gp.add(insertBtn, 2, 0);
