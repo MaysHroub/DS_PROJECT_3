@@ -50,7 +50,7 @@ public class NavigateDateLayout extends TabLayout {
 		downBtn = new Button("DOWN ↓");
 		downBtn.setOnAction(e -> moveDown());
 		
-		GridPane gp = new GridPane(10, 10);
+		GridPane gp = new GridPane(15, 20);
 		gp.add(l1, 0, 0);
 		gp.add(totalL, 1, 0);
 		gp.add(l2, 0, 1);
