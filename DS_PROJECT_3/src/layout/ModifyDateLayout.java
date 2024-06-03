@@ -35,7 +35,7 @@ public class ModifyDateLayout extends TabLayout {
 	private Label statusL;
 
 	public ModifyDateLayout(DataHolder dataHolder) {
-		super("", dataHolder);
+		super("Modify Date", dataHolder);
 	}
 
 	@SuppressWarnings("unchecked")
