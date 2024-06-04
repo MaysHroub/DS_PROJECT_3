@@ -244,10 +244,14 @@ public class ModifyMartyrLayout extends TabLayout {
 
 	@Override
 	public void updateContent() {
-		if (getDataHolder().getCurrentDate() != null)
+		if (getDataHolder().getCurrentDate() != null) {
 			currentDateL.setText(getDataHolder().getCurrentDate().toString());
-		fillTableInOrder();
-		fillDistrictsCB();
+			if (getDataHolder().getCurrentDate().getMartyrs().size() != 0) {
+				fillTableInOrder();
+				fillDistrictsCB();
+			}
+			return;
+		}
 	}
 	
 	private void fillDistrictsCB() {
