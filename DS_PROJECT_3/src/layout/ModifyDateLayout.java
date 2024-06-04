@@ -35,6 +35,8 @@ public class ModifyDateLayout extends TabLayout {
 	private TableView<HNode<MDate>> datesTable;
 	private Alert alert;
 	private Label statusL;
+	
+	ObservableList<HNode<MDate>> dateList;
 
 	public ModifyDateLayout(DataHolder dataHolder) {
 		super("Modify Date", dataHolder);
@@ -103,7 +105,7 @@ public class ModifyDateLayout extends TabLayout {
 	}
 	
 	private void print() {
-		ObservableList<HNode<MDate>> dateList = FXCollections.observableArrayList();
+		
 		QuadraticOHash<MDate> dates = getDataHolder().getDates();
 		for (int i = 0; i < dates.getTableSize(); i++)
 			if (dates.get(i).getFlag() != Flag.EMPTY)
