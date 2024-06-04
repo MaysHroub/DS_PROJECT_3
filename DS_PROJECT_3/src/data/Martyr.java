@@ -76,10 +76,10 @@ public class Martyr implements Comparable<Martyr> {
 		
 		maxHeapify(a);  // to a max-heap
 		
-		while (N > 0) {
+		while (N > 1) {
 			// 1. Swap the first element with the last element
-			temp = a[0];
-			a[0] = a[N];
+			temp = a[1];
+			a[1] = a[N];
 			a[N] = temp;
 			
 			// 2. decrement N
@@ -89,28 +89,28 @@ public class Martyr implements Comparable<Martyr> {
 			int k = 1;
 			while (2*k <= N) {
 				int j = 2*k;
-				if (j < N && a[j-1].age < a[j].age) j++;
-				if (a[k-1].age >= a[j-1].age) break;
-				temp = a[k-1];
-				a[k-1] = a[j-1];
-				a[j-1] = temp;
+				if (j < N && a[j].age < a[j+1].age) j++;
+				if (a[k].age >= a[j].age) break;
+				temp = a[k];
+				a[k] = a[j];
+				a[j] = temp;
 				k = j;
 			}
 		}
 	}
 	
 	public static void maxHeapify(Martyr[] a) {
-		int N = a.length - 1, i = N / 2 - 1;
+		int N = a.length - 1, i = N / 2;
 		Martyr temp;
-		while (i-- >= 0) {
+		while (i-- > 0) {
 			int k = i+1;
 			while (2*k <= N) {
 				int j = 2*k;
-				if (j < N && a[j-1].age < a[j].age) j++;
-				if (a[k-1].age >= a[j-1].age) break;
-				temp = a[k-1];
-				a[k-1] = a[j-1];
-				a[j-1] = temp;
+				if (j < N && a[j].age < a[j+1].age) j++;
+				if (a[k].age >= a[j].age) break;
+				temp = a[k];
+				a[k] = a[j];
+				a[j] = temp;
 				k = j;
 			}
 		}
