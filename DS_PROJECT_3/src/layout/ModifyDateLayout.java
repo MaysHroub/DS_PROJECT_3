@@ -129,8 +129,8 @@ public class ModifyDateLayout extends TabLayout {
 			@SuppressWarnings("deprecation")
 			Date date = new Date(newDate.getYear() - 1900, newDate.getMonthValue() - 1, newDate.getDayOfMonth());
 			getDataHolder().getDates().delete(selectedDate);
-			selectedDate.setDate(date);
-			getDataHolder().getDates().add(selectedDate);
+			// selectedDate.setDate(date);
+			getDataHolder().getDates().add(new MDate(date));
 			statusL.setText("Date is updated to " + selectedDate);
 		}
 	}
