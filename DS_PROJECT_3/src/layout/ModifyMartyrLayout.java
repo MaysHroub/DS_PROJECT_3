@@ -140,14 +140,14 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(insertBtn, 2, 0);
 		gp.add(l2, 0, 1);
 		gp.add(ageTF, 1, 1);
-		gp.add(statusL, 2, 1);
 		gp.add(l3, 0, 2);
 		gp.add(new HBox(15, maleRB, femaleRB), 1, 2);
 		gp.add(l4, 0, 3);
 		gp.add(districtsCB, 1, 3);
 		gp.add(locationsCB, 2, 3);
+		gp.add(statusL, 1, 6);
 		gp.add(displaySizeHeightBtn, 0, 4);
-		gp.add(new HBox(10, l5, sizeTF), 0, 5);
+		gp.add(new HBox(25, l5, sizeTF), 0, 5);
 		gp.add(new HBox(10, l6, heightTF), 0, 6);
 		gp.setAlignment(Pos.CENTER);
 		
