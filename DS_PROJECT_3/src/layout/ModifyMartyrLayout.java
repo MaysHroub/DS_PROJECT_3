@@ -151,7 +151,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(new HBox(10, l6, heightTF), 2, 4);
 		gp.setAlignment(Pos.CENTER);
 		
-		VBox vBox = new VBox(15, martyrsTable, new HBox(10, sortTableBtn, displayTableBtn, deleteBtn));
+		HBox hBox = new HBox(10, sortTableBtn, displayTableBtn, deleteBtn);
+		hBox.setAlignment(Pos.CENTER);
+		
+		VBox vBox = new VBox(15, martyrsTable, hBox);
 		vBox.setAlignment(Pos.CENTER);
 		
 		BorderPane layout = new BorderPane();
