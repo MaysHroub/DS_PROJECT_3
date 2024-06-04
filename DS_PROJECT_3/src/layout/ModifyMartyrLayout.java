@@ -258,6 +258,7 @@ public class ModifyMartyrLayout extends TabLayout {
 
 	@Override
 	public void updateContent() {
+		statusL.setText("");
 		if (getDataHolder().getCurrentDate() != null) {
 			currentDateL.setText(getDataHolder().getCurrentDate().toString());
 			if (getDataHolder().getCurrentDate().getMartyrs().size() != 0) {
@@ -271,7 +272,6 @@ public class ModifyMartyrLayout extends TabLayout {
 			martyrs.clear();
 			martyrsTable.refresh();
 		}
-		statusL.setText("");
 	}
 	
 	private void fillDistrictsCB() {
