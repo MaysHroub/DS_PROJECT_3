@@ -62,12 +62,15 @@ public class ModifyMartyrLayout extends TabLayout {
 		TableColumn<Martyr, String> locationColumn = new TableColumn<>("Location");
 		nameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getName()));
 		nameColumn.setOnEditCommit((CellEditEvent<Martyr, String> t) -> {
-			Martyr m = ((Martyr) t.getTableView().getItems().get(t.getTablePosition().getRow()));
-			getDataHolder().getCurrentDate().getMartyrs().delete(m);
-			m.setName(t.getNewValue());
-			getDataHolder().getCurrentDate().getMartyrs().insert(m);
-			fillTableInOrder();
-			statusL.setText("Martyr's name is updated");
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.isPresent() && result.get() == ButtonType.OK) {
+				Martyr m = ((Martyr) t.getTableView().getItems().get(t.getTablePosition().getRow()));
+				getDataHolder().getCurrentDate().getMartyrs().delete(m);
+				m.setName(t.getNewValue());
+				getDataHolder().getCurrentDate().getMartyrs().insert(m);
+				fillTableInOrder();
+				statusL.setText("Martyr's name is updated");
+			}
 		});
 		ageColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getAge()).asObject());
 		genderColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getGender() + ""));
