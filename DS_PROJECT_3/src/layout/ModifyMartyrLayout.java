@@ -187,6 +187,10 @@ public class ModifyMartyrLayout extends TabLayout {
 		String district = districtsCB.getValue().toString(),
 				location = locationsCB.getValue();
 		Martyr martyr = new Martyr(name, district, location, gender, age);
+		if (getDataHolder().getCurrentDate().getMartyrs().find(martyr) != null) {
+			statusL.setText("Martyr " + name + " already exists");
+			return;
+		}
 		getDataHolder().getCurrentDate().getMartyrs().insert(martyr);
 		getDataHolder().getCurrentDate().getStat().updateStats();
 		martyrs.add(martyr);
