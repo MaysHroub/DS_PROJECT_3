@@ -245,6 +245,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillDistrictsCB() {
+		districtsCB.getItems().clear();
 		DoublyLinkedList<District> districts = getDataHolder().getDistricts();
 		DNode<District> curr = districts.getHead();
 		while (curr != null) {
@@ -254,6 +255,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	} 
 	
 	private void fillLocationsCB(District district) {
+		locationsCB.getItems().clear();
 		Node<String> curr = district.getLocations().getHead();
 		while (curr != null) {
 			locationsCB.getItems().add(curr.getData());
