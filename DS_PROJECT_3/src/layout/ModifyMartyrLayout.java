@@ -236,6 +236,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		System.arraycopy(arr, 0, arr, 1, arr.length);
 		Martyr.heapSortAsc(arr);
 		martyrs = FXCollections.observableArrayList(arr);
+		martyrs.remove(0);
 		martyrsTable.setItems(martyrs);
 		martyrsTable.refresh();
 	}
