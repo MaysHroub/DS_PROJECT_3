@@ -142,7 +142,7 @@ public class ModifyDateLayout extends TabLayout {
 		if (result.isPresent() && result.get() == ButtonType.OK) {
 			getDataHolder().getDates().delete(selectedDate);
 			datesCB.getItems().remove(selectedDate);
-			
+			statusL.setText("Date " + selectedDate + " is deleted");
 		}
 	}
 
