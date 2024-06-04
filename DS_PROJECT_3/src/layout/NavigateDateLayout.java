@@ -97,7 +97,10 @@ public class NavigateDateLayout extends TabLayout {
 		DataHolder dataHolder = getDataHolder();
 		if (dataHolder.getCurrentDate() == null ||
 				dataHolder.getCurrentDate().getMartyrs().size() == 0) {
-			currentDateL.setText("");
+			if (dataHolder.getCurrentDate() != null)
+				currentDateL.setText(dataHolder.getCurrentDate().toString());
+			else 
+				currentDateL.setText("");
 			totalL.setText("");
 			totalMalesL.setText("");
 			totalFemalesL.setText("");
