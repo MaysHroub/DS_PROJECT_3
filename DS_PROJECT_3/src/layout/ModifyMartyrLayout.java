@@ -1,5 +1,6 @@
 package layout;
 
+import java.util.Arrays;
 import java.util.Optional;
 import data.District;
 import data.Martyr;
@@ -230,8 +231,9 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void sortTableByAge() {
-		Martyr[] arr = new Martyr[martyrs.size()];
+		Martyr[] arr = new Martyr[martyrs.size()+1];
 		martyrs.toArray(arr);
+		System.arraycopy(arr, 0, arr, 1, arr.length);
 		Martyr.heapSortAsc(arr);
 		martyrs = FXCollections.observableArrayList(arr);
 		martyrsTable.setItems(martyrs);
