@@ -76,6 +76,10 @@ public class ModifyDateLayout extends TabLayout {
 		datesTable.getColumns().addAll(dateColumn, flagColumn);
 		datesTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 		
+		dateList = FXCollections.observableArrayList();
+		
+		datesTable.setItems(dateList);
+		
 		GridPane upGrid = new GridPane(15, 20);
 		upGrid.add(pickNewL, 0, 0);
 		upGrid.add(datePicker, 1, 0);
