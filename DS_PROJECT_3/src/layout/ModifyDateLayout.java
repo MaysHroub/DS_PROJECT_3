@@ -108,6 +108,7 @@ public class ModifyDateLayout extends TabLayout {
 		for (int i = 0; i < dates.getTableSize(); i++)
 			if (dates.get(i).getFlag() != Flag.EMPTY)
 				dateList.add(dates.get(i));
+		datesTable.setItems(dateList);
 	}
 
 	private void update() {
