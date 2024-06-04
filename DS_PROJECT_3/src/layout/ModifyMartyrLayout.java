@@ -111,6 +111,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		deleteBtn.setOnAction(e -> deleteMartyr());
 		displaySizeHeightBtn = new Button("Display tree's size and height");
 		displaySizeHeightBtn.setOnAction(e -> {
+			if (getDataHolder().getCurrentDate() == null) return;
 			sizeTF.setText(getDataHolder().getCurrentDate().getMartyrs().size() + "");
 			heightTF.setText(getDataHolder().getCurrentDate().getMartyrs().height() + "");
 		});
