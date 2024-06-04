@@ -252,6 +252,11 @@ public class ModifyMartyrLayout extends TabLayout {
 			}
 			return;
 		}
+		else {
+			currentDateL.setText("");
+			martyrs.clear();
+			martyrsTable.refresh();
+		}
 	}
 	
 	private void fillDistrictsCB() {
