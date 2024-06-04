@@ -131,6 +131,7 @@ public class ModifyDateLayout extends TabLayout {
 			getDataHolder().getDates().delete(selectedDate);
 			selectedDate.setDate(date);
 			getDataHolder().getDates().add(selectedDate);
+			statusL.setText("Date is updated to " + selectedDate);
 		}
 	}
 
