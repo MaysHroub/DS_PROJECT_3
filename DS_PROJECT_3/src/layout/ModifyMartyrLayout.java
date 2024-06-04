@@ -145,7 +145,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(l4, 0, 3);
 		gp.add(districtsCB, 1, 3);
 		gp.add(locationsCB, 2, 3);
-		gp.add(statusL, 1, 6);
+		// gp.add(statusL, 1, 6);
 		gp.add(displaySizeHeightBtn, 0, 4);
 		gp.add(new HBox(25, l5, sizeTF), 0, 5);
 		gp.add(new HBox(10, l6, heightTF), 0, 6);
@@ -161,6 +161,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		layout.setTop(currentDateL);
 		layout.setCenter(gp);
 		layout.setRight(vBox);
+		layout.setBottom(statusL);
 		layout.setPadding(new Insets(10));
 		
 		BorderPane.setAlignment(vBox, Pos.CENTER);
