@@ -181,8 +181,7 @@ public class ModifyDateLayout extends TabLayout {
 
 	@Override
 	public void updateContent() {
-		// TODO Auto-generated method stub
-
+		statusL.setText("");
 	}
 
 }
