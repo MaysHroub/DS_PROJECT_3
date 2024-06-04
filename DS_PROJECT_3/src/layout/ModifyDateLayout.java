@@ -161,7 +161,8 @@ public class ModifyDateLayout extends TabLayout {
 		if (getDataHolder().getDates().find(mDate) == null) {
 			MDateStat stat = new MDateStat(mDate);
 			mDate.setStat(stat);
-			getDataHolder().getDates().add(mDate);			
+			getDataHolder().getDates().add(mDate);
+			fillDatesCB();
 			statusL.setText("Date " + selectedDate + " is inserted");
 		} else 
 			statusL.setText("Date " + selectedDate + " already exists");
