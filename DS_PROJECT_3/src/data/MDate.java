@@ -50,5 +50,9 @@ public class MDate implements Comparable<MDate> {
 		return String.format("%4d/%2d/%2d", date.getYear()+1900, date.getMonth()+1, date.getDate());
 	}
 
+	@Override
+	public int hashCode() {
+		return date.hashCode();
+	}
 
 }
