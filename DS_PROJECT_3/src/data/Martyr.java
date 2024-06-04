@@ -106,7 +106,7 @@ public class Martyr implements Comparable<Martyr> {
 			int k = i+1;
 			while (2*k <= N) {
 				int j = 2*k;
-				if (j < N && a[j].compareTo(a[j+1]) < 0) j++;
+				if (j < N && a[j].age < a[j+1].age) j++;
 				if (a[k].age >= a[j].age) break;
 				temp = a[k];
 				a[k] = a[j];
