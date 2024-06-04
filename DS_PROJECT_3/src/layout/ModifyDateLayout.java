@@ -145,8 +145,6 @@ public class ModifyDateLayout extends TabLayout {
 			getDataHolder().getDates().delete(selectedDate);
 			datesCB.getItems().remove(selectedDate);
 			statusL.setText("Date " + selectedDate + " is deleted");
-			getDataHolder().moveDown();
-			getDataHolder().moveUp();
 		}
 	}
 
