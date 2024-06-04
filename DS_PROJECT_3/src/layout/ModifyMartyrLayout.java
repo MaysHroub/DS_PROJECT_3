@@ -88,7 +88,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		alert.setHeaderText("Are you sure you want to proceed?");
 		alert.setContentText("This action cannot be undone :)");
 		
-		statusL = currentDateL = new Label();
+		currentDateL = new Label();
+		statusL = new Label();
 		
 		Label l1 = new Label("Enter martyr's name:"),
 				l2 = new Label("Enter martyr's age:"),
