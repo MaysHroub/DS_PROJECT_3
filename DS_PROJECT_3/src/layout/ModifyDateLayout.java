@@ -169,6 +169,7 @@ public class ModifyDateLayout extends TabLayout {
 	}
 
 	private void fillDatesCB() {
+		datesCB.getItems().clear();
 		QuadraticOHash<MDate> dates = getDataHolder().getDates();
 		for (int i = 0; i < dates.getTableSize(); i++)
 			if (dates.get(i).getFlag() == Flag.FULL)
