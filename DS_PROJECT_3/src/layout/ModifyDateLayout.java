@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.Optional;
 import data.MDate;
+import data.MDateStat;
 import dataholder.DataHolder;
 import hash.Flag;
 import hash.HNode;
@@ -158,6 +159,8 @@ public class ModifyDateLayout extends TabLayout {
 		Date date = new Date(selectedDate.getYear() - 1900, selectedDate.getMonthValue() - 1, selectedDate.getDayOfMonth());
 		MDate mDate = new MDate(date);
 		if (getDataHolder().getDates().find(mDate) == null) {
+			MDateStat stat = new MDateStat(mDate);
+			mDate.setStat(stat);
 			getDataHolder().getDates().add(mDate);			
 			statusL.setText("Date " + selectedDate + " is inserted");
 		} else 
