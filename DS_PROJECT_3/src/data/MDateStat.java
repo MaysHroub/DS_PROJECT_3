@@ -21,6 +21,7 @@ public class MDateStat implements Stat {
 	}
 	
 	private void traverseMartyrs() {
+		totalMartyrs = totalMales = totalFemales = sumAges = 0;
 		youngest = oldest = date.getMartyrs().getRoot().getData();
 		districts.clear(); locations.clear();
 		traverseMartyrs(date.getMartyrs().getRoot());
