@@ -158,6 +158,7 @@ public class ModifyDateLayout extends TabLayout {
 		@SuppressWarnings("deprecation")
 		Date date = new Date(selectedDate.getYear() - 1900, selectedDate.getMonthValue() - 1, selectedDate.getDayOfMonth());
 		getDataHolder().getDates().add(new MDate(date));
+		statusL.setText("Date " + selectedDate + " is inserted");
 	}
 
 	private void fillDatesCB() {
