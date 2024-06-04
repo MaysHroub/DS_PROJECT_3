@@ -185,9 +185,11 @@ public class ModifyMartyrLayout extends TabLayout {
 		char gender = (maleRB.isSelected()) ? 'M' : 'F';
 		String district = districtsCB.getValue().toString(),
 				location = locationsCB.getValue();
-		getDataHolder().getCurrentDate().getMartyrs().insert(
-				new Martyr(name, district, location, gender, age));
+		Martyr martyr = new Martyr(name, district, location, gender, age);
+		getDataHolder().getCurrentDate().getMartyrs().insert(martyr);
 		getDataHolder().getCurrentDate().getStat().updateStats();
+		martyrs.add(martyr);
+		martyrsTable.refresh();
 		statusL.setText("Martyr " + name + " is inserted :)");
 	}
 	
