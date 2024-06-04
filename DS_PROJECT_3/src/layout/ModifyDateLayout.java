@@ -139,8 +139,11 @@ public class ModifyDateLayout extends TabLayout {
 			return;
 		}
 		Optional<ButtonType> result = alert.showAndWait();
-		if (result.isPresent() && result.get() == ButtonType.OK) 
+		if (result.isPresent() && result.get() == ButtonType.OK) {
 			getDataHolder().getDates().delete(selectedDate);
+			datesCB.getItems().remove(selectedDate);
+			
+		}
 	}
 
 	private void insert() {
