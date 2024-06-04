@@ -61,7 +61,12 @@
 	-fx-background-color: #332e59;
 }
 
-
+.radio-button {
+	-fx-font-size: 13;
+	-fx-font-weight: bold;
+	-fx-font-family: 'Cambria';
+	-fx-text-fill: white;
+}
 
 
 
