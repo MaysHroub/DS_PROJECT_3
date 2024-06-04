@@ -271,6 +271,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			martyrs.clear();
 			martyrsTable.refresh();
 		}
+		statusL.setText("");
 	}
 	
 	private void fillDistrictsCB() {
