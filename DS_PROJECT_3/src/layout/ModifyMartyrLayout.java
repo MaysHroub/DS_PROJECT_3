@@ -165,6 +165,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void insertMartyr() {
+		if (getDataHolder().getCurrentDate() == null) return;
 		if (nameTF.getText().isEmpty() || ageTF.getText().isEmpty() ||
 				districtsCB.getValue() == null || locationsCB.getValue() == null ||
 				!maleRB.isSelected() && !femaleRB.isSelected()) {
