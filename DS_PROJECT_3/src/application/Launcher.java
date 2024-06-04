@@ -80,7 +80,6 @@ public class Launcher extends Application {
 		File selectedFile = fileChooser.showOpenDialog(stage);
 		if (selectedFile == null)
 			return;
-		int counter = 0;
 		try (Scanner in = new Scanner(new FileInputStream(selectedFile))) {
 			in.nextLine(); // 0.name, 1.event, 2.age, 3.location, 4.district, 5.gender
 			while (in.hasNext()) {
@@ -100,7 +99,6 @@ public class Launcher extends Application {
 					hashTable.add(martyrDate);
 					MDateStat stat = new MDateStat(martyrDate);
 					martyrDate.setStat(stat);
-					++counter;
 				}
 				
 				Martyr martyr = new Martyr(tokens[0], tokens[4], tokens[3],
@@ -121,7 +119,6 @@ public class Launcher extends Application {
 		} catch (FileNotFoundException e) {
 			System.out.println(e);
 		}
-		System.out.println(counter);
 		dataHolder.setDates(hashTable);
 		dataHolder.setDistricts(districts);
 	}
