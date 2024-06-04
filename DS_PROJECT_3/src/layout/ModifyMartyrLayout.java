@@ -205,6 +205,9 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableInOrder() {
+		if (getDataHolder().getCurrentDate() == null || 
+				getDataHolder().getCurrentDate().getMartyrs().size() == 0)
+			return;
 		martyrs.clear();
 		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
 		fillTableInOrder(root);
@@ -219,6 +222,9 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableLevelOrder() {
+		if (getDataHolder().getCurrentDate() == null || 
+				getDataHolder().getCurrentDate().getMartyrs().size() == 0)
+			return;
 		martyrs.clear();
 		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
 		if (root == null) return;
@@ -234,6 +240,9 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void sortTableByAge() {
+		if (getDataHolder().getCurrentDate() == null || 
+				getDataHolder().getCurrentDate().getMartyrs().size() == 0)
+			return;
 		Martyr[] arr = new Martyr[martyrs.size()+1];
 		martyrs.toArray(arr);
 		System.arraycopy(arr, 0, arr, 1, arr.length - 1);
