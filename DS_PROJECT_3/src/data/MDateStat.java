@@ -42,6 +42,7 @@ public class MDateStat implements Stat {
 				currCount++;
 			else if (maxCount < currCount) {
 				maxCount = currCount;
+				currCount = 1;
 				districtWithMaxMartyr = curr.getData();
 			}
 			curr = curr.getNext();
@@ -58,6 +59,7 @@ public class MDateStat implements Stat {
 				currCount++;
 			else if (maxCount < currCount) {
 				maxCount = currCount;
+				currCount = 1;
 				locationWithMaxMartyr = curr.getData();
 			}
 			curr = curr.getNext();
