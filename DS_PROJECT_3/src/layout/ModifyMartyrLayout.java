@@ -190,7 +190,7 @@ public class ModifyMartyrLayout extends TabLayout {
 			return;
 		}
 		if (ageTF.getText().length() > 5) {
-			statusL.setText("Invalid number for age");
+			statusL.setText("Invalid number for age. It must consist of at most 5 digits");
 			return;
 		}
 		String name = nameTF.getText();
