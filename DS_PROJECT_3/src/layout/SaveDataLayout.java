@@ -8,6 +8,7 @@ import data.Martyr;
 import data_structs.hash.Flag;
 import data_structs.hash.HNode;
 import data_structs.hash.QuadraticOHash;
+import data_structs.tree.TNode;
 import dataholder.DataHolder;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -16,7 +17,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import tree.TNode;
 
 public class SaveDataLayout extends TabLayout {
 	

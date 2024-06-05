@@ -1,4 +1,4 @@
-package tree;
+package data_structs.tree;
 
 import data_structs.queue.LinkedListQueue;
 

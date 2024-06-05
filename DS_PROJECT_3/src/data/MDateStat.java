@@ -2,7 +2,7 @@ package data;
 
 import data_structs.linkedlist.LinkedList;
 import data_structs.linkedlist.Node;
-import tree.TNode;
+import data_structs.tree.TNode;
 
 public class MDateStat implements Stat {
 	

@@ -2,7 +2,7 @@ package data;
 
 import java.util.Date;
 
-import tree.AVLTree;
+import data_structs.tree.AVLTree;
 
 public class MDate implements Comparable<MDate> {
 	

@@ -1,4 +1,4 @@
-package tree;
+package data_structs.tree;
 
 public class TNode<T extends Comparable<T>> implements Comparable<TNode<T>> {
 

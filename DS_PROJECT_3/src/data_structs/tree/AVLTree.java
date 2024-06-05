@@ -1,4 +1,4 @@
-package tree;
+package data_structs.tree;
 
 
 public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T> {
