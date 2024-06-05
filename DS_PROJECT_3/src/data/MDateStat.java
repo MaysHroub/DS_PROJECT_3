@@ -35,7 +35,6 @@ public class MDateStat implements Stat {
 	private void findDistrictWithMaxMartyr() {
 		Node<String> curr = districts.getHead();
 		if (curr == null) return;
-		districtWithMaxMartyr = curr.getData();
 		int maxCount = 1, currCount = 1;
 		while (curr.getNext() != null) {
 			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
@@ -46,6 +45,10 @@ public class MDateStat implements Stat {
 				districtWithMaxMartyr = curr.getData();
 			}
 			curr = curr.getNext();
+		}
+		if (maxCount < currCount) {
+			maxCount = currCount;
+			districtWithMaxMartyr = curr.getData();
 		}
 	}
 	
