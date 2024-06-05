@@ -167,7 +167,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		layout.setLeft(gp);
 		layout.setCenter(vBox);
 		layout.setBottom(statusL);
-		layout.setPadding(new Insets(10));
+		layout.setPadding(new Insets(15));
 		
 		BorderPane.setAlignment(vBox, Pos.CENTER);
 		
