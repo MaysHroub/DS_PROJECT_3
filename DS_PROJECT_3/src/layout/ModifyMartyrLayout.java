@@ -189,6 +189,10 @@ public class ModifyMartyrLayout extends TabLayout {
 			statusL.setText("You must enter a number for age text-field");
 			return;
 		}
+		if (ageTF.getText().length() > 5) {
+			statusL.setText("Invalid number for age");
+			return;
+		}
 		String name = nameTF.getText();
 		int age = Integer.valueOf(ageTF.getText());
 		char gender = (maleRB.isSelected()) ? 'M' : 'F';
