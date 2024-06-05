@@ -4,9 +4,9 @@ import data.District;
 import data.MDate;
 import data.Martyr;
 import data_structs.doublylinkedlist.DoublyLinkedList;
-import hash.Flag;
-import hash.HNode;
-import hash.QuadraticOHash;
+import data_structs.hash.Flag;
+import data_structs.hash.HNode;
+import data_structs.hash.QuadraticOHash;
 
 public class DataHolder {
 	

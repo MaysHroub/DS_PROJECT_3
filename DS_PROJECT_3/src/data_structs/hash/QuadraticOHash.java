@@ -1,4 +1,4 @@
-package hash;
+package data_structs.hash;
 
 public class QuadraticOHash<T extends Comparable<T>>  extends OpenAddressignHash<T> {
 	

@@ -1,4 +1,4 @@
-package hash;
+package data_structs.hash;
 
 public abstract class OpenAddressignHash<T extends Comparable<T>> {
 	

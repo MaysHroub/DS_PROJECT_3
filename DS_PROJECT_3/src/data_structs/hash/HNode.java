@@ -1,4 +1,4 @@
-package hash;
+package data_structs.hash;
 
 public class HNode<T extends Comparable<T>> {
 	
