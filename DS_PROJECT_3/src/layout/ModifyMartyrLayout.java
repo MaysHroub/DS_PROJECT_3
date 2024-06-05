@@ -58,6 +58,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	@Override
 	protected Pane createLayout() {
 		martyrsTable = new TableView<>();
+		martyrsTable.setEditable(true);
 		TableColumn<Martyr, String> nameColumn = new TableColumn<>("Name");
 		TableColumn<Martyr, Integer> ageColumn = new TableColumn<>("Age");
 		TableColumn<Martyr, String> genderColumn = new TableColumn<>("Gender");
