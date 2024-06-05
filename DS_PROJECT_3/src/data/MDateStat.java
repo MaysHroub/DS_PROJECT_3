@@ -55,7 +55,6 @@ public class MDateStat implements Stat {
 	private void findLocationWithMaxMartyr() {
 		Node<String> curr = locations.getHead();
 		if (curr == null) return;
-		locationWithMaxMartyr = curr.getData();
 		int maxCount = 1, currCount = 1;
 		while (curr.getNext() != null) {
 			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
@@ -66,6 +65,10 @@ public class MDateStat implements Stat {
 				locationWithMaxMartyr = curr.getData();
 			}
 			curr = curr.getNext();
+		}
+		if (maxCount < currCount) {
+			maxCount = currCount;
+			locationWithMaxMartyr = curr.getData();
 		}
 	}
 
