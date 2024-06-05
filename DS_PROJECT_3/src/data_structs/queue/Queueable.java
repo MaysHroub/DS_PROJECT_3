@@ -1,4 +1,4 @@
-package queue;
+package data_structs.queue;
 
 public interface Queueable<T extends Comparable<T>> {
 	

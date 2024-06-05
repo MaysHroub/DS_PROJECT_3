@@ -7,6 +7,7 @@ import data.Martyr;
 import data_structs.doublylinkedlist.DNode;
 import data_structs.doublylinkedlist.DoublyLinkedList;
 import data_structs.linkedlist.Node;
+import data_structs.queue.LinkedListQueue;
 import dataholder.DataHolder;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -33,7 +34,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import queue.LinkedListQueue;
 import tree.TNode;
 
 public class ModifyMartyrLayout extends TabLayout {

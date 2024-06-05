@@ -1,6 +1,6 @@
 package tree;
 
-import queue.LinkedListQueue;
+import data_structs.queue.LinkedListQueue;
 
 public class BinarySearchTree<T extends Comparable<T>> {
 	

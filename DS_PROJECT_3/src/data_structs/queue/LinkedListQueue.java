@@ -1,4 +1,4 @@
-package queue;
+package data_structs.queue;
 
 
 public class LinkedListQueue<T extends Comparable<T>> implements Queueable<T>{
