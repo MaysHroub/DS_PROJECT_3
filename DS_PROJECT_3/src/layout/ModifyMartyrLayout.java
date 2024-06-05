@@ -100,7 +100,8 @@ public class ModifyMartyrLayout extends TabLayout {
 				l3 = new Label("Select gender:"),
 				l4 = new Label("Select District:"),
 				l5 = new Label("Size:"),
-				l6 = new Label("Height:");
+				l6 = new Label("Height:"),
+				l7 = new Label("Select Location:");
 		
 		nameTF = new TextField();
 		ageTF = new TextField();
