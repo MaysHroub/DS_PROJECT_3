@@ -10,7 +10,7 @@ public class MDateStat implements Stat {
 	private int totalMartyrs, totalFemales, totalMales;
 	private int sumAges;
 	private Martyr youngest, oldest;
-	private String DistrictWithMaxMartyr, LocationWithMaxMartyr;
+	private String districtWithMaxMartyr, locationWithMaxMartyr;
 	
 	private LinkedList<String> districts, locations;
 	
@@ -23,7 +23,7 @@ public class MDateStat implements Stat {
 	private void traverseMartyrs() {
 		totalMartyrs = totalMales = totalFemales = sumAges = 0;
 		districts.clear(); locations.clear();
-		DistrictWithMaxMartyr = LocationWithMaxMartyr = "";
+		districtWithMaxMartyr = locationWithMaxMartyr = "";
 		if (date.getMartyrs().getRoot() == null) return;
 		youngest = oldest = date.getMartyrs().getRoot().getData();
 		traverseMartyrs(date.getMartyrs().getRoot());
@@ -34,14 +34,14 @@ public class MDateStat implements Stat {
 	private void findDistrictWithMaxMartyr() {
 		Node<String> curr = districts.getHead();
 		if (curr == null) return;
-		DistrictWithMaxMartyr = curr.getData();
+		districtWithMaxMartyr = curr.getData();
 		int maxCount = 1, currCount = 1;
 		while (curr.getNext() != null) {
 			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
 				currCount++;
 			else if (maxCount < currCount) {
 				maxCount = currCount;
-				DistrictWithMaxMartyr = curr.getData();
+				districtWithMaxMartyr = curr.getData();
 			}
 			curr = curr.getNext();
 		}
@@ -50,14 +50,14 @@ public class MDateStat implements Stat {
 	private void findLocationWithMaxMartyr() {
 		Node<String> curr = locations.getHead();
 		if (curr == null) return;
-		LocationWithMaxMartyr = curr.getData();
+		locationWithMaxMartyr = curr.getData();
 		int maxCount = 1, currCount = 1;
 		while (curr.getNext() != null) {
 			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
 				currCount++;
 			else if (maxCount < currCount) {
 				maxCount = currCount;
-				LocationWithMaxMartyr = curr.getData();
+				locationWithMaxMartyr = curr.getData();
 			}
 			curr = curr.getNext();
 		}
@@ -103,11 +103,11 @@ public class MDateStat implements Stat {
 	}
 
 	public String getDistrictWithMaxMartyr() {
-		return DistrictWithMaxMartyr;
+		return districtWithMaxMartyr;
 	}
 
 	public String getLocationWithMaxMartyr() {
-		return LocationWithMaxMartyr;
+		return locationWithMaxMartyr;
 	}
 
 	@Override
