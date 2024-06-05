@@ -128,9 +128,12 @@ public class ModifyDateLayout extends TabLayout {
 		if (result.isPresent() && result.get() == ButtonType.OK) {
 			@SuppressWarnings("deprecation")
 			Date date = new Date(newDate.getYear() - 1900, newDate.getMonthValue() - 1, newDate.getDayOfMonth());
-			getDataHolder().getDates().delete(selectedDate);
-			// selectedDate.setDate(date);
 			MDate mDate = new MDate(date);
+			if (getDataHolder().getDates().find(mDate) != null) {
+				statusL.setText("Updating failed. " + mDate + " already exists");
+				return;
+			}
+			getDataHolder().getDates().delete(selectedDate);
 			getDataHolder().getDates().add(mDate);
 			fillDatesCB();
 			statusL.setText("Date is updated to " + mDate);
