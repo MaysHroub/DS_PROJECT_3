@@ -3,7 +3,7 @@ package dataholder;
 import data.District;
 import data.MDate;
 import data.Martyr;
-import doublylinkedlist.DoublyLinkedList;
+import data_structs.doublylinkedlist.DoublyLinkedList;
 import hash.Flag;
 import hash.HNode;
 import hash.QuadraticOHash;

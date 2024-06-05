@@ -1,4 +1,4 @@
-package doublylinkedlist;
+package data_structs.doublylinkedlist;
 
 
 public class DNode<T extends Comparable<T>> {
