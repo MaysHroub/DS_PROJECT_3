@@ -70,6 +70,13 @@ public class ModifyMartyrLayout extends TabLayout {
 			Optional<ButtonType> result = alert.showAndWait();
 			if (result.isPresent() && result.get() == ButtonType.OK) {
 				Martyr m = ((Martyr) t.getTableView().getItems().get(t.getTablePosition().getRow()));
+				String oldName = m.getName();
+				m.setName(t.getNewValue());
+				if (getDataHolder().getCurrentDate().getMartyrs().find(m) != null) {
+					m.setName(oldName);
+					statusL.setText("Updating name failed. Martyr with this new name exist in the same district");
+					return;
+				}
 				getDataHolder().getCurrentDate().getMartyrs().delete(m);
 				m.setName(t.getNewValue());
 				getDataHolder().getCurrentDate().getMartyrs().insert(m);
