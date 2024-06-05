@@ -149,10 +149,11 @@ public class ModifyMartyrLayout extends TabLayout {
 		gp.add(new HBox(15, maleRB, femaleRB), 1, 2);
 		gp.add(l4, 0, 3);
 		gp.add(districtsCB, 1, 3);
-		gp.add(locationsCB, 2, 3);
-		gp.add(displaySizeHeightBtn, 0, 4);
-		gp.add(new HBox(25, l5, sizeTF), 0, 5);
-		gp.add(new HBox(10, l6, heightTF), 0, 6);
+		gp.add(l7, 0, 4);
+		gp.add(locationsCB, 1, 4);
+		gp.add(displaySizeHeightBtn, 0, 5);
+		gp.add(new HBox(25, l5, sizeTF), 0, 6);
+		gp.add(new HBox(10, l6, heightTF), 0, 7);
 		gp.setAlignment(Pos.CENTER);
 		
 		HBox hBox = new HBox(10, sortTableBtn, displayTableBtn, deleteBtn);
