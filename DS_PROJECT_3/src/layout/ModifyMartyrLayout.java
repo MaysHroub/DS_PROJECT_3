@@ -25,6 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TableColumn.CellEditEvent;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
@@ -62,6 +63,7 @@ public class ModifyMartyrLayout extends TabLayout {
 		TableColumn<Martyr, String> districtColumn = new TableColumn<>("District");
 		TableColumn<Martyr, String> locationColumn = new TableColumn<>("Location");
 		nameColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getName()));
+		nameColumn.setCellFactory(TextFieldTableCell.<Martyr> forTableColumn());
 		nameColumn.setOnEditCommit((CellEditEvent<Martyr, String> t) -> {
 			Optional<ButtonType> result = alert.showAndWait();
 			if (result.isPresent() && result.get() == ButtonType.OK) {
