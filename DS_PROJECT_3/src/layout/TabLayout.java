@@ -7,7 +7,7 @@ public abstract class TabLayout {
 	
 	private Pane layout;
 	private String name;
-	private DataHolder dataHolder;
+	protected DataHolder dataHolder;
 	
 	protected TabLayout(String name, DataHolder dataHolder) {
 		this.name = name;
