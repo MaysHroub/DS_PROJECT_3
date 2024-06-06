@@ -84,17 +84,16 @@ public class NavigateDateLayout extends TabLayout {
 	}
 	
 	private void moveDown() {
-		getDataHolder().moveDown();
+		dataHolder.moveDown();
 		fillLayoutWithData();
 	}
 
 	private void moveUp() {
-		getDataHolder().moveUp();
+		dataHolder.moveUp();
 		fillLayoutWithData();
 	}
 
 	private void fillLayoutWithData() {
-		DataHolder dataHolder = getDataHolder();
 		if (dataHolder.getCurrentDate() == null ||
 				dataHolder.getCurrentDate().getMartyrs().size() == 0) {
 			if (dataHolder.getCurrentDate() != null)

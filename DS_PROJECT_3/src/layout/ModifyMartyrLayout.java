@@ -72,14 +72,14 @@ public class ModifyMartyrLayout extends TabLayout {
 				Martyr m = ((Martyr) t.getTableView().getItems().get(t.getTablePosition().getRow()));
 				String oldName = m.getName();
 				m.setName(t.getNewValue());
-				if (getDataHolder().getCurrentDate().getMartyrs().find(m) != null) {
+				if (dataHolder.getCurrentDate().getMartyrs().find(m) != null) {
 					m.setName(oldName);
 					statusL.setText("Updating name failed. Martyr with this new name exist in the same district");
 					return;
 				}
-				getDataHolder().getCurrentDate().getMartyrs().delete(m);
+				dataHolder.getCurrentDate().getMartyrs().delete(m);
 				m.setName(t.getNewValue());
-				getDataHolder().getCurrentDate().getMartyrs().insert(m);
+				dataHolder.getCurrentDate().getMartyrs().insert(m);
 				fillTableInOrder();
 				statusL.setText("Martyr's name is updated");
 			}
@@ -125,9 +125,9 @@ public class ModifyMartyrLayout extends TabLayout {
 		deleteBtn.setOnAction(e -> deleteMartyr());
 		displaySizeHeightBtn = new Button("Display tree's size and height");
 		displaySizeHeightBtn.setOnAction(e -> {
-			if (getDataHolder().getCurrentDate() == null) return;
-			sizeTF.setText(getDataHolder().getCurrentDate().getMartyrs().size() + "");
-			heightTF.setText(getDataHolder().getCurrentDate().getMartyrs().height() + "");
+			if (dataHolder.getCurrentDate() == null) return;
+			sizeTF.setText(dataHolder.getCurrentDate().getMartyrs().size() + "");
+			heightTF.setText(dataHolder.getCurrentDate().getMartyrs().height() + "");
 		});
 		sortTableBtn = new Button("Sort by age");
 		sortTableBtn.setOnAction(e -> sortTableByAge());
@@ -185,7 +185,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void insertMartyr() {
-		if (getDataHolder().getCurrentDate() == null) return;
+		if (dataHolder.getCurrentDate() == null) return;
 		if (nameTF.getText().isEmpty() || ageTF.getText().isEmpty() ||
 				districtsCB.getValue() == null || locationsCB.getValue() == null ||
 				!maleRB.isSelected() && !femaleRB.isSelected()) {
@@ -206,12 +206,12 @@ public class ModifyMartyrLayout extends TabLayout {
 		String district = districtsCB.getValue().toString(),
 				location = locationsCB.getValue();
 		Martyr martyr = new Martyr(name, district, location, gender, age);
-		if (getDataHolder().getCurrentDate().getMartyrs().find(martyr) != null) {
+		if (dataHolder.getCurrentDate().getMartyrs().find(martyr) != null) {
 			statusL.setText("Martyr " + name + " already exists");
 			return;
 		}
-		getDataHolder().getCurrentDate().getMartyrs().insert(martyr);
-		getDataHolder().getCurrentDate().getStat().updateStats();
+		dataHolder.getCurrentDate().getMartyrs().insert(martyr);
+		dataHolder.getCurrentDate().getStat().updateStats();
 		martyrs.add(martyr);
 		martyrsTable.refresh();
 		statusL.setText("Martyr " + name + " is inserted :)");
@@ -225,20 +225,20 @@ public class ModifyMartyrLayout extends TabLayout {
 		}
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.isPresent() && result.get() == ButtonType.OK) {
-			getDataHolder().getCurrentDate().getMartyrs().delete(selectedMartyr);
+			dataHolder.getCurrentDate().getMartyrs().delete(selectedMartyr);
 			martyrs.remove(selectedMartyr);
 			martyrsTable.refresh();
-			getDataHolder().getCurrentDate().getStat().updateStats();
+			dataHolder.getCurrentDate().getStat().updateStats();
 			statusL.setText("Martyr " + selectedMartyr.getName() + " is deleted");
 		}
 	}
 	
 	private void fillTableInOrder() {
-		if (getDataHolder().getCurrentDate() == null || 
-				getDataHolder().getCurrentDate().getMartyrs().size() == 0)
+		if (dataHolder.getCurrentDate() == null || 
+				dataHolder.getCurrentDate().getMartyrs().size() == 0)
 			return;
 		martyrs.clear();
-		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
+		TNode<Martyr> root = dataHolder.getCurrentDate().getMartyrs().getRoot();
 		fillTableInOrder(root);
 		martyrsTable.refresh();
 	}
@@ -251,11 +251,11 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableLevelOrder() {
-		if (getDataHolder().getCurrentDate() == null || 
-				getDataHolder().getCurrentDate().getMartyrs().size() == 0)
+		if (dataHolder.getCurrentDate() == null || 
+				dataHolder.getCurrentDate().getMartyrs().size() == 0)
 			return;
 		martyrs.clear();
-		TNode<Martyr> root = getDataHolder().getCurrentDate().getMartyrs().getRoot();
+		TNode<Martyr> root = dataHolder.getCurrentDate().getMartyrs().getRoot();
 		if (root == null) return;
 		LinkedListQueue<TNode<Martyr>> queue = new LinkedListQueue<>();
 		queue.enqueue(root);
@@ -269,8 +269,8 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void sortTableByAge() {
-		if (getDataHolder().getCurrentDate() == null || 
-				getDataHolder().getCurrentDate().getMartyrs().size() == 0)
+		if (dataHolder.getCurrentDate() == null || 
+				dataHolder.getCurrentDate().getMartyrs().size() == 0)
 			return;
 		Martyr[] arr = new Martyr[martyrs.size()+1];
 		martyrs.toArray(arr);
@@ -285,9 +285,9 @@ public class ModifyMartyrLayout extends TabLayout {
 	@Override
 	public void updateContent() {
 		statusL.setText("");
-		if (getDataHolder().getCurrentDate() != null) {
-			currentDateL.setText(getDataHolder().getCurrentDate().toString());
-			if (getDataHolder().getCurrentDate().getMartyrs().size() != 0) {
+		if (dataHolder.getCurrentDate() != null) {
+			currentDateL.setText(dataHolder.getCurrentDate().toString());
+			if (dataHolder.getCurrentDate().getMartyrs().size() != 0) {
 				fillTableInOrder();
 				fillDistrictsCB();
 			}
@@ -302,7 +302,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	
 	private void fillDistrictsCB() {
 		districtsCB.getItems().clear();
-		DoublyLinkedList<District> districts = getDataHolder().getDistricts();
+		DoublyLinkedList<District> districts = dataHolder.getDistricts();
 		DNode<District> curr = districts.getHead();
 		while (curr != null) {
 			districtsCB.getItems().add(curr.getData());

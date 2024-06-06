@@ -58,7 +58,7 @@ public class SaveDataLayout extends TabLayout {
 	}
 	
 	private void writeDates(PrintWriter out) {
-		QuadraticOHash<MDate> dates = getDataHolder().getDates();
+		QuadraticOHash<MDate> dates = dataHolder.getDates();
 		int m = dates.getTableSize();
 		for (int i = 0; i < m; i++) {
 			HNode<MDate> date = dates.get(i);

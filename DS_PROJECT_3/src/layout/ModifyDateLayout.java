@@ -111,7 +111,7 @@ public class ModifyDateLayout extends TabLayout {
 	
 	private void print() {
 		dateList.clear();
-		QuadraticOHash<MDate> dates = getDataHolder().getDates();
+		QuadraticOHash<MDate> dates = dataHolder.getDates();
 		for (int i = 0; i < dates.getTableSize(); i++)
 			if (dates.get(i).getFlag() != Flag.EMPTY)
 				dateList.add(dates.get(i));
@@ -130,12 +130,12 @@ public class ModifyDateLayout extends TabLayout {
 			@SuppressWarnings("deprecation")
 			Date date = new Date(newDate.getYear() - 1900, newDate.getMonthValue() - 1, newDate.getDayOfMonth());
 			MDate mDate = new MDate(date);
-			if (getDataHolder().getDates().find(mDate) != null) {
+			if (dataHolder.getDates().find(mDate) != null) {
 				statusL.setText("Updating failed. " + mDate + " already exists");
 				return;
 			}
-			getDataHolder().getDates().delete(selectedDate);
-			getDataHolder().getDates().add(mDate);
+			dataHolder.getDates().delete(selectedDate);
+			dataHolder.getDates().add(mDate);
 			fillDatesCB();
 			statusL.setText("Date is updated to " + mDate);
 		}
@@ -149,7 +149,7 @@ public class ModifyDateLayout extends TabLayout {
 		}
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.isPresent() && result.get() == ButtonType.OK) {
-			getDataHolder().getDates().delete(selectedDate);
+			dataHolder.getDates().delete(selectedDate);
 			datesCB.getItems().remove(selectedDate);
 			statusL.setText("Date " + selectedDate + " is deleted");
 		}
@@ -164,10 +164,10 @@ public class ModifyDateLayout extends TabLayout {
 		@SuppressWarnings("deprecation")
 		Date date = new Date(selectedDate.getYear() - 1900, selectedDate.getMonthValue() - 1, selectedDate.getDayOfMonth());
 		MDate mDate = new MDate(date);
-		if (getDataHolder().getDates().find(mDate) == null) {
+		if (dataHolder.getDates().find(mDate) == null) {
 			MDateStat stat = new MDateStat(mDate);
 			mDate.setStat(stat);
-			getDataHolder().getDates().add(mDate);
+			dataHolder.getDates().add(mDate);
 			fillDatesCB();
 			statusL.setText("Date " + selectedDate + " is inserted");
 		} else 
@@ -176,7 +176,7 @@ public class ModifyDateLayout extends TabLayout {
 
 	private void fillDatesCB() {
 		datesCB.getItems().clear();
-		QuadraticOHash<MDate> dates = getDataHolder().getDates();
+		QuadraticOHash<MDate> dates = dataHolder.getDates();
 		for (int i = 0; i < dates.getTableSize(); i++)
 			if (dates.get(i).getFlag() == Flag.FULL)
 				datesCB.getItems().add(dates.get(i).getData());
