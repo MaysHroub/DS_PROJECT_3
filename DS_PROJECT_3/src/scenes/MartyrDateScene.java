@@ -30,12 +30,16 @@ public class MartyrDateScene extends TabScene {
 		tabPane.setSide(Side.BOTTOM);
 
 		MenuItem martyrItem = new MenuItem("Martyr screen");
+		MenuItem saveItem = new MenuItem("Save screen");
 		
 		martyrItem.setOnAction(e -> {
 			getManager().switchTo(SceneID.MARTYR);
 		});
+		saveItem.setOnAction(e -> {
+			getManager().switchTo(SceneID.SAVE);
+		});
 		Menu menu = new Menu("Go to");
-		menu.getItems().addAll(martyrItem);
+		menu.getItems().addAll(martyrItem, saveItem);
 		MenuBar menuBar = new MenuBar(menu);
 		
 		BorderPane bp = new BorderPane();
