@@ -134,6 +134,8 @@ public class ModifyDateLayout extends TabLayout {
 				statusL.setText("Updating failed. " + mDate + " already exists");
 				return;
 			}
+			mDate.setMartyrs(selectedDate.getMartyrs());
+			mDate.setStat(selectedDate.getStat());
 			dataHolder.getDates().delete(selectedDate);
 			dataHolder.getDates().add(mDate);
 			fillDatesCB();
