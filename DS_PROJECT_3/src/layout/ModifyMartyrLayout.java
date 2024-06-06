@@ -73,6 +73,7 @@ public class ModifyMartyrLayout extends TabLayout {
 				if (dataHolder.getCurrentDate().getMartyrs().find(
 						new Martyr(t.getNewValue(), m.getDistrict(), "", 'M', 0)) != null) {
 					statusL.setText("Updating name failed. Martyr with this new name exist in the same district");
+					martyrsTable.refresh();
 					return;
 				}
 				dataHolder.getCurrentDate().getMartyrs().delete(m);
@@ -285,11 +286,8 @@ public class ModifyMartyrLayout extends TabLayout {
 		statusL.setText("");
 		if (dataHolder.getCurrentDate() != null) {
 			currentDateL.setText(dataHolder.getCurrentDate().toString());
-			if (dataHolder.getCurrentDate().getMartyrs().size() != 0) {
-				fillTableInOrder();
-				fillDistrictsCB();
-			}
-			return;
+			fillTableInOrder();
+			fillDistrictsCB();
 		}
 		else {
 			currentDateL.setText("");
