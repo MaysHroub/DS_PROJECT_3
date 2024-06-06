@@ -233,8 +233,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableInOrder() {
-		if (dataHolder.getCurrentDate() == null || 
-				dataHolder.getCurrentDate().getMartyrs().size() == 0)
+		if (dataHolder.getCurrentDate() == null)
 			return;
 		martyrs.clear();
 		TNode<Martyr> root = dataHolder.getCurrentDate().getMartyrs().getRoot();
@@ -250,8 +249,7 @@ public class ModifyMartyrLayout extends TabLayout {
 	}
 	
 	private void fillTableLevelOrder() {
-		if (dataHolder.getCurrentDate() == null || 
-				dataHolder.getCurrentDate().getMartyrs().size() == 0)
+		if (dataHolder.getCurrentDate() == null)
 			return;
 		martyrs.clear();
 		TNode<Martyr> root = dataHolder.getCurrentDate().getMartyrs().getRoot();
