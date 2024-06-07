@@ -105,7 +105,7 @@ public class ModifyDateLayout extends TabLayout {
 		leftBox.setAlignment(Pos.CENTER);
 		
 		BorderPane layout = new BorderPane();
-		layout.setLeft(leftBox);
+		layout.setCenter(leftBox);
 		layout.setRight(rightBox);
 		layout.setPadding(new Insets(20));
 		
