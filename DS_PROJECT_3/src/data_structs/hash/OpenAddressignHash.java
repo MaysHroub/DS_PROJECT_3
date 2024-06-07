@@ -11,7 +11,7 @@ public abstract class OpenAddressignHash<T extends Comparable<T>> {
 		for(; !isPrime(++m); );
 		table = new HNode[m];
 		for (int i = 0; i < m; i++)
-			table[i] = new HNode<>(null);
+			table[i] = new HNode<>(i);
 	}
 	
 	public int getCollisions() {
