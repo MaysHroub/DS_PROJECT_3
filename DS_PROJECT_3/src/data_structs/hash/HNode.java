@@ -4,6 +4,7 @@ public class HNode<T extends Comparable<T>> {
 	
 	private T data;
 	private Flag flag;
+	private int index;
 	
 	public HNode(T data) {
 		this.data = data;
