@@ -68,4 +68,8 @@ public abstract class OpenAddressignHash<T extends Comparable<T>> {
 				add(tempTable[i].getData());
 	}
 
+	public int getAvailableData() {
+		return availableData;
+	}
+
 }
