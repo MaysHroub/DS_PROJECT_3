@@ -9,6 +9,7 @@ import data_structs.hash.Flag;
 import data_structs.hash.HNode;
 import data_structs.hash.QuadraticOHash;
 import dataholder.DataHolder;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -73,9 +74,11 @@ public class ModifyDateLayout extends TabLayout {
 		datesTable = new TableView<>();
 		TableColumn<HNode<MDate>, String> dateColumn = new TableColumn<>("Date");
 		TableColumn<HNode<MDate>, String> flagColumn = new TableColumn<>("Flag");
+		TableColumn<HNode<MDate>, Integer> indexColumn = new TableColumn<>("Index");
 		dateColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getData().toString()));
 		flagColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getFlag().toString()));
-		datesTable.getColumns().addAll(dateColumn, flagColumn);
+		indexColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getIndex()).asObject());
+		datesTable.getColumns().addAll(indexColumn, dateColumn, flagColumn);
 		datesTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 		
 		dateList = FXCollections.observableArrayList();
