@@ -7,12 +7,12 @@ public class HNode<T extends Comparable<T>> {
 	private int index;
 	
 	public HNode(T data) {
-		this.data = data;
+		setData(data);
 		flag = Flag.EMPTY;
 	}
 	
 	public HNode(int index) {
-		this.index = index;
+		setIndex(index);
 		flag = Flag.EMPTY;
 	}
 	
