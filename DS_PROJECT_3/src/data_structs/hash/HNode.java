@@ -11,6 +11,11 @@ public class HNode<T extends Comparable<T>> {
 		flag = Flag.EMPTY;
 	}
 	
+	public HNode(int index) {
+		this.index = index;
+		flag = Flag.EMPTY;
+	}
+	
 	@Override
 	public String toString() {
 		return String.format("[%s | %s]", data.toString(), flag);
