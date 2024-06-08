@@ -60,6 +60,7 @@ public class ModifyDateLayout extends TabLayout {
 		printBtn = new Button("Print");
 		printBtn.setOnAction(e -> print());
 		printWithEmptyBtn = new Button("Print Including Empty Spots");
+		printWithEmptyBtn.setOnAction(e -> printWithEmpty());
 		
 		datesCB = new ComboBox<>();
 		fillDatesCB();
