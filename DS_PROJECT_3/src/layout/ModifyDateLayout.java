@@ -77,7 +77,7 @@ public class ModifyDateLayout extends TabLayout {
 		TableColumn<HNode<MDate>, String> dateColumn = new TableColumn<>("Date");
 		TableColumn<HNode<MDate>, String> flagColumn = new TableColumn<>("Flag");
 		TableColumn<HNode<MDate>, Integer> indexColumn = new TableColumn<>("Index");
-		dateColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getData().toString()));
+		dateColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().toString()));
 		flagColumn.setCellValueFactory(p -> new SimpleStringProperty(p.getValue().getFlag().toString()));
 		indexColumn.setCellValueFactory(p -> new SimpleIntegerProperty(p.getValue().getIndex()).asObject());
 		datesTable.getColumns().addAll(indexColumn, dateColumn, flagColumn);
