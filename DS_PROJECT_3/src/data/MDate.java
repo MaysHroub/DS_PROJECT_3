@@ -47,7 +47,7 @@ public class MDate implements Comparable<MDate> {
 	@Override
 	public String toString() {
 		// yyyy/mm/dd
-		return String.format("%4d/%2d/%2d", date.getYear()+1900, date.getMonth()+1, date.getDate());
+		return (date == null) ? "" : String.format("%4d/%2d/%2d", date.getYear()+1900, date.getMonth()+1, date.getDate());
 	}
 
 	@Override
