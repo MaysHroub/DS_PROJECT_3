@@ -18,7 +18,7 @@ public class HNode<T extends Comparable<T>> {
 	
 	@Override
 	public String toString() {
-		return String.format("[%s | %s]", data.toString(), flag);
+		return (data == null) ? "" : String.format("[%s | %s]", data.toString(), flag);
 	}
 
 	public Flag getFlag() {
