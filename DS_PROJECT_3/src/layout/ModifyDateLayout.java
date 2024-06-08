@@ -100,7 +100,7 @@ public class ModifyDateLayout extends TabLayout {
 		downGrid.add(deleteBtn, 2, 0);
 		downGrid.setAlignment(Pos.CENTER);
 		
-		VBox rightBox = new VBox(15, datesTable, printBtn);
+		VBox rightBox = new VBox(15, datesTable, printBtn, printWithEmptyBtn);
 		rightBox.setAlignment(Pos.CENTER);
 		
 		VBox leftBox = new VBox(20, upGrid, downGrid, statusL);
