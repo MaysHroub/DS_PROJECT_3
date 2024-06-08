@@ -121,6 +121,14 @@ public class ModifyDateLayout extends TabLayout {
 				dateList.add(dates.get(i));
 		datesTable.refresh();
 	}
+	
+	private void printWithEmpty() {
+		dateList.clear();
+		QuadraticOHash<MDate> dates = dataHolder.getDates();
+		for (int i = 0; i < dates.getTableSize(); i++)
+			dateList.add(dates.get(i));
+		datesTable.refresh();
+	}
 
 	private void update() {
 		MDate selectedDate = datesCB.getValue();
