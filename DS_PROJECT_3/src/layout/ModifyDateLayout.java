@@ -33,7 +33,7 @@ public class ModifyDateLayout extends TabLayout {
 	
 	private DatePicker datePicker;
 	private ComboBox<MDate> datesCB;
-	private Button insertBtn, deleteBtn, updateBtn, printBtn;
+	private Button insertBtn, deleteBtn, updateBtn, printBtn, printWithEmptyBtn;
 	private TableView<HNode<MDate>> datesTable;
 	private Alert alert;
 	private Label statusL;
@@ -59,6 +59,7 @@ public class ModifyDateLayout extends TabLayout {
 		updateBtn.setOnAction(e -> update());
 		printBtn = new Button("Print");
 		printBtn.setOnAction(e -> print());
+		printWithEmptyBtn = new Button("Print Including Empty Spots");
 		
 		datesCB = new ComboBox<>();
 		fillDatesCB();
