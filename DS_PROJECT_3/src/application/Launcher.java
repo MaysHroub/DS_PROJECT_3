@@ -46,7 +46,7 @@ public class Launcher extends Application {
 		loadBtn.setOnAction(e -> {
 			DataHolder dataHolder = new DataHolder();
 			loadData(primaryStage, dataHolder);
-			initPorgram(primaryStage, dataHolder);
+			if (dataHolder.getDates() != null) initPorgram(primaryStage, dataHolder);
 		});
 
 		primaryStage.setScene(new Scene(new StackPane(loadBtn), WIDTH, HEIGHT));
