@@ -3,10 +3,10 @@ package data_structs.queue;
 
 public class LinkedListQueue<T extends Comparable<T>> implements Queueable<T>{
 
-	private class Node<T extends Comparable<T>> {
-		T data;
-		Node<T> next;
-		Node(T data) {
+	private class Node<E extends Comparable<E>> {
+		E data;
+		Node<E> next;
+		Node(E data) {
 			this.data = data;
 		}
 	}
