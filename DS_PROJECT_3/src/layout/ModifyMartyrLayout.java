@@ -195,12 +195,12 @@ public class ModifyMartyrLayout extends TabLayout {
 			statusL.setText("You must enter a number for age text-field");
 			return;
 		}
-		if (ageTF.getText().length() > 5) {
-			statusL.setText("Invalid number for age. It must consist of at most 5 digits");
+		int age = Integer.valueOf(ageTF.getText());
+		if (age > 120) {
+			statusL.setText("Invalid number for age. It must be at most 120 years");
 			return;
 		}
 		String name = nameTF.getText();
-		int age = Integer.valueOf(ageTF.getText());
 		char gender = (maleRB.isSelected()) ? 'M' : 'F';
 		String district = districtsCB.getValue().toString(),
 				location = locationsCB.getValue();
