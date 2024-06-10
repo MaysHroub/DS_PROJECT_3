@@ -2,7 +2,6 @@ package dataholder;
 
 import data.District;
 import data.MDate;
-import data.Martyr;
 import data_structs.doublylinkedlist.DoublyLinkedList;
 import data_structs.hash.Flag;
 import data_structs.hash.HNode;

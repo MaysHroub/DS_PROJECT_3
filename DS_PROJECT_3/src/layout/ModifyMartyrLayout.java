@@ -1,6 +1,5 @@
 package layout;
 
-import java.util.Arrays;
 import java.util.Optional;
 import data.District;
 import data.Martyr;
