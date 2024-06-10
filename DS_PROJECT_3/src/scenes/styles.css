@@ -68,5 +68,10 @@
 	-fx-text-fill: white;
 }
 
-
+.date-picker .label {
+	-fx-font-size: 14;
+	-fx-font-family: 'Cambria';
+	-fx-font-weight: bold;
+	-fx-text-fill: black;
+}
 
