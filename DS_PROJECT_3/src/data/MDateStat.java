@@ -42,27 +42,6 @@ public class MDateStat implements Stat {
 		findLocationWithMaxMartyr();
 	}
 	
-//	private void findDistrictWithMaxMartyr() {
-//		Node<String> curr = districts.getHead();
-//		if (curr == null) return;
-//		districtWithMaxMartyr = curr.getData();
-//		int maxCount = 1, currCount = 1;
-//		while (curr.getNext() != null) {
-//			if (curr.getData().compareTo(curr.getNext().getData()) == 0) 
-//				currCount++;
-//			else if (maxCount < currCount) {
-//				maxCount = currCount;
-//				currCount = 1;
-//				districtWithMaxMartyr = curr.getData();
-//			}
-//			curr = curr.getNext();
-//		}
-//		if (maxCount < currCount) {
-//			maxCount = currCount;
-//			districtWithMaxMartyr = curr.getData();
-//		}
-//	}
-	
 	private void findLocationWithMaxMartyr() {
 		Node<String> curr = locations.getHead();
 		if (curr == null) return;
