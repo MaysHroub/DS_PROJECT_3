@@ -44,6 +44,7 @@ public class MDate implements Comparable<MDate> {
 		return date.compareTo(o.date);
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Override
 	public String toString() {
 		// yyyy/mm/dd
